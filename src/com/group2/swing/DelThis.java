@@ -11,6 +11,6 @@ package com.group2.swing;
 public class DelThis {
 	public static void main(String[]args){
         
-        System.out.println("Pogi ka");
+        System.out.println("Chriss");
     }
 }
