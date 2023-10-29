@@ -9,5 +9,8 @@ package com.group2.swing;
  * @author RapRap
  */
 public class DelThis {
-	
+	public static void main(String[]args){
+        
+        System.out.println("Pogi ka");
+    }
 }
