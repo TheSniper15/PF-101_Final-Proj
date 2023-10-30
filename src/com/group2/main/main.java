@@ -1,5 +1,10 @@
 package com.group2.main;
 
+import com.group2.form.*;
+
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 public class main extends javax.swing.JFrame {
 
 
@@ -7,8 +12,6 @@ public class main extends javax.swing.JFrame {
 		initComponents();
 	}
 
-	
-	
 	@SuppressWarnings("unchecked")
         // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
         private void initComponents() {
@@ -56,12 +59,29 @@ public class main extends javax.swing.JFrame {
 		}
 		//</editor-fold>
 
-		/* Create and display the form */
-		java.awt.EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				new main().setVisible(true);
+		/* Create and display the Loading form */
+		main m = new main();
+		log_in login = new log_in();
+		
+		m.setVisible(true);
+		/*
+		try 
+		{
+			for(int i = 0; i < 100; i++)
+			{
+				Thread.sleep(20);
+				m.Loading.setValue(i);
 			}
-		});
+				
+		} 
+		catch (InterruptedException ex) 
+		{
+				Logger.getLogger(main.class.getName()).log(Level.SEVERE, null, ex);
+		}
+		*/
+		m.setVisible(false);
+		login.setVisible(true);
+		m.dispose();
 	}
 
 	
