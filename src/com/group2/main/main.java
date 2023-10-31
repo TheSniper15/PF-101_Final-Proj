@@ -17,6 +17,7 @@ public class main extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        Loading = new javax.swing.JProgressBar();
         background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -28,6 +29,7 @@ public class main extends javax.swing.JFrame {
 
         jPanel1.setMaximumSize(new java.awt.Dimension(1920, 1080));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel1.add(Loading, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 950, 1130, 30));
 
         background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/group2/background/LOADING_SCREEN.jpg"))); // NOI18N
         jPanel1.add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
@@ -69,7 +71,7 @@ public class main extends javax.swing.JFrame {
 		log_in login = new log_in();
 		
 		m.setVisible(true);
-		/*
+		
 		try 
 		{
 			for(int i = 0; i < 100; i++)
@@ -86,12 +88,13 @@ public class main extends javax.swing.JFrame {
 		
 		m.setVisible(false);
 		login.setVisible(true);
-		m.dispose(); */
+		m.dispose(); 
 	}
 
 	
 	
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JProgressBar Loading;
     private javax.swing.JLabel background;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
