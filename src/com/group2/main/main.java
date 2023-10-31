@@ -1,7 +1,6 @@
 package com.group2.main;
 
 import com.group2.form.*;
-
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -24,7 +23,6 @@ public class main extends javax.swing.JFrame {
         setMaximumSize(new java.awt.Dimension(1920, 1080));
         setMinimumSize(new java.awt.Dimension(1920, 1080));
         setUndecorated(true);
-        setPreferredSize(new java.awt.Dimension(1920, 1080));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setMaximumSize(new java.awt.Dimension(1920, 1080));
