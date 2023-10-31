@@ -15,8 +15,8 @@ public class log_in extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         LoginButton = new javax.swing.JLabel();
-        InputPassword = new javax.swing.JTextField();
         InputUsername = new javax.swing.JTextField();
+        jPasswordField1 = new javax.swing.JPasswordField();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -43,14 +43,6 @@ public class log_in extends javax.swing.JFrame {
         });
         jPanel1.add(LoginButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 790, 400, 80));
 
-        InputPassword.setBackground(new java.awt.Color(0, 0, 0));
-        InputPassword.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                InputPasswordActionPerformed(evt);
-            }
-        });
-        jPanel1.add(InputPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 620, 420, 50));
-
         InputUsername.setBackground(new java.awt.Color(0, 0, 0));
         InputUsername.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -58,6 +50,10 @@ public class log_in extends javax.swing.JFrame {
             }
         });
         jPanel1.add(InputUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 480, 420, 50));
+
+        jPasswordField1.setBackground(new java.awt.Color(0, 0, 0));
+        jPasswordField1.setText("jPasswordField1");
+        jPanel1.add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 620, 420, 50));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/group2/background/LOGIN.jpg"))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
@@ -71,10 +67,6 @@ public class log_in extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_LoginButtonMouseClicked
 
-    private void InputPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InputPasswordActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_InputPasswordActionPerformed
-
     private void InputUsernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InputUsernameActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_InputUsernameActionPerformed
@@ -85,10 +77,10 @@ public class log_in extends javax.swing.JFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField InputPassword;
     private javax.swing.JTextField InputUsername;
     private javax.swing.JLabel LoginButton;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPasswordField jPasswordField1;
     // End of variables declaration//GEN-END:variables
 }
