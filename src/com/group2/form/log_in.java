@@ -17,7 +17,7 @@ public class log_in extends javax.swing.JFrame {
         LoginButton = new javax.swing.JLabel();
         InputUsername = new javax.swing.JTextField();
         InputPassword = new javax.swing.JPasswordField();
-        jLabel5 = new javax.swing.JLabel();
+        ExirtButton = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -66,8 +66,13 @@ public class log_in extends javax.swing.JFrame {
         });
         jPanel1.add(InputPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 620, 420, 60));
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/group2/icon/logout (2).png"))); // NOI18N
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(1840, 1000, -1, -1));
+        ExirtButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/group2/icon/logout (2).png"))); // NOI18N
+        ExirtButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ExirtButtonMouseClicked(evt);
+            }
+        });
+        jPanel1.add(ExirtButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(1840, 1000, -1, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/group2/background/LOGIN.jpg"))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
@@ -78,7 +83,8 @@ public class log_in extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void LoginButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LoginButtonMouseClicked
-        // TODO add your handling code here:
+        new dashboard().setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_LoginButtonMouseClicked
 
     private void InputUsernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InputUsernameActionPerformed
@@ -89,17 +95,21 @@ public class log_in extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_InputPasswordActionPerformed
 
+    private void ExirtButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ExirtButtonMouseClicked
+       System.exit(0);
+    }//GEN-LAST:event_ExirtButtonMouseClicked
+
 	/**
 	 * @param args the command line arguments
 	 */
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel ExirtButton;
     private javax.swing.JPasswordField InputPassword;
     private javax.swing.JTextField InputUsername;
     private javax.swing.JLabel LoginButton;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

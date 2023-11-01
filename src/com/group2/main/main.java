@@ -27,9 +27,11 @@ public class main extends javax.swing.JFrame {
 
         jPanel1.setMaximumSize(new java.awt.Dimension(1920, 1080));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        jPanel1.add(Loading, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 950, 1130, 30));
 
-        background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/group2/background/LOADING_SCREEN.jpg"))); // NOI18N
+        Loading.setPreferredSize(new java.awt.Dimension(146, 3));
+        jPanel1.add(Loading, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 950, 1060, 30));
+
+        background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/group2/background/Loadingbackground2nd.jpg"))); // NOI18N
         jPanel1.add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1920, 1080));
@@ -88,6 +90,7 @@ public class main extends javax.swing.JFrame {
 		login.setVisible(true);
 		m.dispose(); 
 	}
+        
 
 	
 	
