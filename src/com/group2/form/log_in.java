@@ -17,6 +17,7 @@ public class log_in extends javax.swing.JFrame {
         LoginButton = new javax.swing.JLabel();
         InputUsername = new javax.swing.JTextField();
         InputPassword = new javax.swing.JPasswordField();
+        jLabel5 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -65,6 +66,9 @@ public class log_in extends javax.swing.JFrame {
         });
         jPanel1.add(InputPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 620, 420, 60));
 
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/group2/icon/logout (2).png"))); // NOI18N
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(1840, 1000, -1, -1));
+
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/group2/background/LOGIN.jpg"))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
@@ -95,6 +99,7 @@ public class log_in extends javax.swing.JFrame {
     private javax.swing.JTextField InputUsername;
     private javax.swing.JLabel LoginButton;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
