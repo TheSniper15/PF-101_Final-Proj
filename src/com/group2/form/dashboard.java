@@ -21,9 +21,7 @@ public class dashboard extends javax.swing.JFrame {
         SaveButton = new javax.swing.JLabel();
         CancelButton = new javax.swing.JLabel();
         BookButton = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
         jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -41,7 +39,7 @@ public class dashboard extends javax.swing.JFrame {
         jPanel2.setMaximumSize(new java.awt.Dimension(294, 150));
         jPanel2.setMinimumSize(new java.awt.Dimension(294, 150));
         jPanel2.setPreferredSize(new java.awt.Dimension(294, 150));
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 40, 760, 500));
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 30, 760, 500));
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1250, 510, -1, -1));
 
         CardButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/group2/icon/card.png"))); // NOI18N
@@ -76,29 +74,13 @@ public class dashboard extends javax.swing.JFrame {
         });
         jPanel1.add(BookButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(1210, 550, -1, -1));
 
-        jTextField1.setFont(new java.awt.Font("MS UI Gothic", 1, 48)); // NOI18N
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 770, 760, -1));
-
         jTextField2.setFont(new java.awt.Font("MS UI Gothic", 1, 48)); // NOI18N
         jTextField2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField2ActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 630, 760, -1));
-
-        jTextField3.setFont(new java.awt.Font("MS UI Gothic", 1, 48)); // NOI18N
-        jTextField3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField3ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 700, 760, -1));
+        jPanel1.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 630, 760, 50));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/group2/background/BGMain.jpg"))); // NOI18N
         jLabel1.setAlignmentX(0.5F);
@@ -125,17 +107,9 @@ public class dashboard extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_BookButtonMouseClicked
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
-
     private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField2ActionPerformed
-
-    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField3ActionPerformed
 
 	/**
 	 * @param args the command line arguments
@@ -152,8 +126,6 @@ public class dashboard extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
     // End of variables declaration//GEN-END:variables
 }

@@ -2,11 +2,16 @@ package com.group2.form;
 
 import com.group2.form.*;
 
+
 public class log_in extends javax.swing.JFrame {
+
+    private boolean True;
+    private boolean False;
 
 
 	public log_in() {
 		initComponents();
+                this.HidePassword.setVisible(False);
 	}
 
 	@SuppressWarnings("unchecked")
@@ -15,9 +20,11 @@ public class log_in extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         LoginButton = new javax.swing.JLabel();
+        ShowPassword = new javax.swing.JLabel();
+        HidePassword = new javax.swing.JLabel();
         InputUsername = new javax.swing.JTextField();
         InputPassword = new javax.swing.JPasswordField();
-        ExirtButton = new javax.swing.JLabel();
+        ExirtButton1 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -44,6 +51,28 @@ public class log_in extends javax.swing.JFrame {
         });
         jPanel1.add(LoginButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 790, 400, 80));
 
+        ShowPassword.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/group2/icon/show.png"))); // NOI18N
+        ShowPassword.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ShowPasswordMouseClicked(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                ShowPasswordMousePressed(evt);
+            }
+        });
+        jPanel1.add(ShowPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(1330, 620, -1, -1));
+
+        HidePassword.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/group2/icon/Hide.png"))); // NOI18N
+        HidePassword.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                HidePasswordMouseClicked(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                HidePasswordMousePressed(evt);
+            }
+        });
+        jPanel1.add(HidePassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(1330, 620, -1, -1));
+
         InputUsername.setBackground(new java.awt.Color(0,0,0,1));
         InputUsername.setFont(new java.awt.Font("MS UI Gothic", 1, 48)); // NOI18N
         InputUsername.setForeground(new java.awt.Color(255, 255, 255));
@@ -56,7 +85,7 @@ public class log_in extends javax.swing.JFrame {
         jPanel1.add(InputUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 480, 420, 60));
 
         InputPassword.setBackground(new java.awt.Color(0,0,0,1));
-        InputPassword.setFont(new java.awt.Font("MS UI Gothic", 1, 24)); // NOI18N
+        InputPassword.setFont(new java.awt.Font("MS UI Gothic", 1, 48)); // NOI18N
         InputPassword.setForeground(new java.awt.Color(255, 255, 255));
         InputPassword.setBorder(null);
         InputPassword.addActionListener(new java.awt.event.ActionListener() {
@@ -66,13 +95,13 @@ public class log_in extends javax.swing.JFrame {
         });
         jPanel1.add(InputPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 620, 420, 60));
 
-        ExirtButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/group2/icon/logout (2).png"))); // NOI18N
-        ExirtButton.addMouseListener(new java.awt.event.MouseAdapter() {
+        ExirtButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/group2/icon/logout (2).png"))); // NOI18N
+        ExirtButton1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                ExirtButtonMouseClicked(evt);
+                ExirtButton1MouseClicked(evt);
             }
         });
-        jPanel1.add(ExirtButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(1840, 1000, -1, -1));
+        jPanel1.add(ExirtButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1840, 1000, -1, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/group2/background/LOGIN.jpg"))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
@@ -95,9 +124,31 @@ public class log_in extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_InputPasswordActionPerformed
 
-    private void ExirtButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ExirtButtonMouseClicked
-       System.exit(0);
-    }//GEN-LAST:event_ExirtButtonMouseClicked
+    private void ShowPasswordMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ShowPasswordMouseClicked
+       
+        
+    }//GEN-LAST:event_ShowPasswordMouseClicked
+
+    private void ExirtButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ExirtButton1MouseClicked
+        System.exit(0);
+    }//GEN-LAST:event_ExirtButton1MouseClicked
+
+    private void HidePasswordMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_HidePasswordMouseClicked
+        
+       
+    }//GEN-LAST:event_HidePasswordMouseClicked
+
+    private void ShowPasswordMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ShowPasswordMousePressed
+         HidePassword.setVisible(True);
+        ShowPassword.setVisible(False);
+        InputPassword.setEchoChar((char)0);
+    }//GEN-LAST:event_ShowPasswordMousePressed
+
+    private void HidePasswordMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_HidePasswordMousePressed
+         ShowPassword.setVisible(True);
+        HidePassword.setVisible(False);
+        InputPassword.setEchoChar('*');
+    }//GEN-LAST:event_HidePasswordMousePressed
 
 	/**
 	 * @param args the command line arguments
@@ -105,10 +156,12 @@ public class log_in extends javax.swing.JFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel ExirtButton;
+    private javax.swing.JLabel ExirtButton1;
+    private javax.swing.JLabel HidePassword;
     private javax.swing.JPasswordField InputPassword;
     private javax.swing.JTextField InputUsername;
     private javax.swing.JLabel LoginButton;
+    private javax.swing.JLabel ShowPassword;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
