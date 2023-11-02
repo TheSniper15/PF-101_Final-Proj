@@ -1,8 +1,5 @@
 package com.group2.form;
 
-import com.group2.form.*;
-
-
 public class log_in extends javax.swing.JFrame {
 
 	public log_in() {
