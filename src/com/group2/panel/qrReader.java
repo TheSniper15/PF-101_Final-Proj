@@ -52,6 +52,114 @@ public class qrReader extends javax.swing.JPanel implements Runnable,ThreadFacto
 			return null;
 		}
 	}
+	
+	@SuppressWarnings("unchecked")
+        // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+        private void initComponents() {
+
+                jScrollPane1 = new javax.swing.JScrollPane();
+                result_field = new javax.swing.JTextPane();
+                wbcmPanel = new javax.swing.JPanel();
+                CardButton = new javax.swing.JLabel();
+                BookButton = new javax.swing.JLabel();
+                jTextField2 = new javax.swing.JTextField();
+                SaveButton = new javax.swing.JLabel();
+                CancelButton = new javax.swing.JLabel();
+
+                jScrollPane1.setViewportView(result_field);
+
+                setBackground(new java.awt.Color(0,0,0,1));
+                setForeground(new java.awt.Color(0,0,0,1));
+
+                wbcmPanel.setMaximumSize(new java.awt.Dimension(294, 150));
+                wbcmPanel.setMinimumSize(new java.awt.Dimension(294, 150));
+                wbcmPanel.setPreferredSize(new java.awt.Dimension(294, 150));
+                wbcmPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+                CardButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/group2/icon/card.png"))); // NOI18N
+                CardButton.addMouseListener(new java.awt.event.MouseAdapter() {
+                        public void mouseClicked(java.awt.event.MouseEvent evt) {
+                                CardButtonMouseClicked(evt);
+                        }
+                });
+
+                BookButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/group2/icon/open-book.png"))); // NOI18N
+                BookButton.addMouseListener(new java.awt.event.MouseAdapter() {
+                        public void mouseClicked(java.awt.event.MouseEvent evt) {
+                                BookButtonMouseClicked(evt);
+                        }
+                });
+
+                jTextField2.setFont(new java.awt.Font("MS UI Gothic", 1, 48)); // NOI18N
+                jTextField2.addActionListener(new java.awt.event.ActionListener() {
+                        public void actionPerformed(java.awt.event.ActionEvent evt) {
+                                jTextField2ActionPerformed(evt);
+                        }
+                });
+
+                SaveButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/group2/icon/save (1).png"))); // NOI18N
+                SaveButton.addMouseListener(new java.awt.event.MouseAdapter() {
+                        public void mouseClicked(java.awt.event.MouseEvent evt) {
+                                SaveButtonMouseClicked(evt);
+                        }
+                });
+
+                CancelButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/group2/icon/cancel (1).png"))); // NOI18N
+                CancelButton.addMouseListener(new java.awt.event.MouseAdapter() {
+                        public void mouseClicked(java.awt.event.MouseEvent evt) {
+                                CancelButtonMouseClicked(evt);
+                        }
+                });
+
+                javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
+                this.setLayout(layout);
+                layout.setHorizontalGroup(
+                        layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(layout.createSequentialGroup()
+                                                .addGap(10, 10, 10)
+                                                .addComponent(CardButton))
+                                        .addGroup(layout.createSequentialGroup()
+                                                .addGap(10, 10, 10)
+                                                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 760, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGroup(layout.createSequentialGroup()
+                                                .addGap(90, 90, 90)
+                                                .addComponent(CancelButton))
+                                        .addGroup(layout.createSequentialGroup()
+                                                .addGap(10, 10, 10)
+                                                .addComponent(wbcmPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 760, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGroup(layout.createSequentialGroup()
+                                                .addGap(90, 90, 90)
+                                                .addComponent(BookButton))
+                                        .addGroup(layout.createSequentialGroup()
+                                                .addGap(10, 10, 10)
+                                                .addComponent(SaveButton)))
+                                .addGap(10, 10, 10))
+                );
+                layout.setVerticalGroup(
+                        layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(layout.createSequentialGroup()
+                                                .addGap(560, 560, 560)
+                                                .addComponent(CardButton)
+                                                .addGap(16, 16, 16)
+                                                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(170, 170, 170)
+                                                .addComponent(CancelButton))
+                                        .addGroup(layout.createSequentialGroup()
+                                                .addGap(40, 40, 40)
+                                                .addComponent(wbcmPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 500, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGroup(layout.createSequentialGroup()
+                                                .addGap(560, 560, 560)
+                                                .addComponent(BookButton))
+                                        .addGroup(layout.createSequentialGroup()
+                                                .addGap(860, 860, 860)
+                                                .addComponent(SaveButton)))
+                                .addGap(156, 156, 156))
+                );
+        }// </editor-fold>//GEN-END:initComponents
 
 	public void initWebcam()
 	{
@@ -64,12 +172,9 @@ public class qrReader extends javax.swing.JPanel implements Runnable,ThreadFacto
 		panel.setPreferredSize(size);
 		panel.setFPSDisplayed(true);
 		
-		webcamPanel.add(panel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 470,300));
+		wbcmPanel.add(panel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800,500));
 		
-		executor.execute(this);
-		
-		webcamPanel.setVisible(false);
-		
+		executor.execute(this);	
 	}
 	
 	@Override
@@ -125,114 +230,6 @@ public class qrReader extends javax.swing.JPanel implements Runnable,ThreadFacto
 		return t;
 	}
 	
-	@SuppressWarnings("unchecked")
-        // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
-        private void initComponents() {
-
-                jScrollPane1 = new javax.swing.JScrollPane();
-                result_field = new javax.swing.JTextPane();
-                webcamPanel = new javax.swing.JPanel();
-                CardButton = new javax.swing.JLabel();
-                BookButton = new javax.swing.JLabel();
-                jTextField2 = new javax.swing.JTextField();
-                SaveButton = new javax.swing.JLabel();
-                CancelButton = new javax.swing.JLabel();
-
-                jScrollPane1.setViewportView(result_field);
-
-                setBackground(new java.awt.Color(0,0,0,1));
-                setForeground(new java.awt.Color(0,0,0,1));
-
-                webcamPanel.setMaximumSize(new java.awt.Dimension(294, 150));
-                webcamPanel.setMinimumSize(new java.awt.Dimension(294, 150));
-                webcamPanel.setPreferredSize(new java.awt.Dimension(294, 150));
-                webcamPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-                CardButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/group2/icon/card.png"))); // NOI18N
-                CardButton.addMouseListener(new java.awt.event.MouseAdapter() {
-                        public void mouseClicked(java.awt.event.MouseEvent evt) {
-                                CardButtonMouseClicked(evt);
-                        }
-                });
-
-                BookButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/group2/icon/open-book.png"))); // NOI18N
-                BookButton.addMouseListener(new java.awt.event.MouseAdapter() {
-                        public void mouseClicked(java.awt.event.MouseEvent evt) {
-                                BookButtonMouseClicked(evt);
-                        }
-                });
-
-                jTextField2.setFont(new java.awt.Font("MS UI Gothic", 1, 48)); // NOI18N
-                jTextField2.addActionListener(new java.awt.event.ActionListener() {
-                        public void actionPerformed(java.awt.event.ActionEvent evt) {
-                                jTextField2ActionPerformed(evt);
-                        }
-                });
-
-                SaveButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/group2/icon/save (1).png"))); // NOI18N
-                SaveButton.addMouseListener(new java.awt.event.MouseAdapter() {
-                        public void mouseClicked(java.awt.event.MouseEvent evt) {
-                                SaveButtonMouseClicked(evt);
-                        }
-                });
-
-                CancelButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/group2/icon/cancel (1).png"))); // NOI18N
-                CancelButton.addMouseListener(new java.awt.event.MouseAdapter() {
-                        public void mouseClicked(java.awt.event.MouseEvent evt) {
-                                CancelButtonMouseClicked(evt);
-                        }
-                });
-
-                javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-                this.setLayout(layout);
-                layout.setHorizontalGroup(
-                        layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addGroup(layout.createSequentialGroup()
-                                                .addGap(10, 10, 10)
-                                                .addComponent(CardButton))
-                                        .addGroup(layout.createSequentialGroup()
-                                                .addGap(10, 10, 10)
-                                                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 760, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGroup(layout.createSequentialGroup()
-                                                .addGap(90, 90, 90)
-                                                .addComponent(CancelButton))
-                                        .addGroup(layout.createSequentialGroup()
-                                                .addGap(10, 10, 10)
-                                                .addComponent(webcamPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 760, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGroup(layout.createSequentialGroup()
-                                                .addGap(90, 90, 90)
-                                                .addComponent(BookButton))
-                                        .addGroup(layout.createSequentialGroup()
-                                                .addGap(10, 10, 10)
-                                                .addComponent(SaveButton)))
-                                .addGap(10, 10, 10))
-                );
-                layout.setVerticalGroup(
-                        layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addGroup(layout.createSequentialGroup()
-                                                .addGap(560, 560, 560)
-                                                .addComponent(CardButton)
-                                                .addGap(16, 16, 16)
-                                                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addGap(170, 170, 170)
-                                                .addComponent(CancelButton))
-                                        .addGroup(layout.createSequentialGroup()
-                                                .addGap(40, 40, 40)
-                                                .addComponent(webcamPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 500, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGroup(layout.createSequentialGroup()
-                                                .addGap(560, 560, 560)
-                                                .addComponent(BookButton))
-                                        .addGroup(layout.createSequentialGroup()
-                                                .addGap(860, 860, 860)
-                                                .addComponent(SaveButton)))
-                                .addGap(156, 156, 156))
-                );
-        }// </editor-fold>//GEN-END:initComponents
-
         private void CardButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CardButtonMouseClicked
                 // TODO add your handling code here:
         }//GEN-LAST:event_CardButtonMouseClicked
@@ -262,6 +259,6 @@ public class qrReader extends javax.swing.JPanel implements Runnable,ThreadFacto
         private javax.swing.JScrollPane jScrollPane1;
         private javax.swing.JTextField jTextField2;
         private javax.swing.JTextPane result_field;
-        private javax.swing.JPanel webcamPanel;
+        private javax.swing.JPanel wbcmPanel;
         // End of variables declaration//GEN-END:variables
 }
