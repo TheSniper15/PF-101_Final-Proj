@@ -17,10 +17,6 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ThreadFactory;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.swing.JTextPane;
-import javax.swing.text.BadLocationException;
-import javax.swing.text.Element;
-import javax.swing.text.StyledDocument;
 
 public class qrReader extends javax.swing.JPanel implements Runnable,ThreadFactory{
 
@@ -31,26 +27,6 @@ public class qrReader extends javax.swing.JPanel implements Runnable,ThreadFacto
 	public qrReader() {
 		initComponents();
 		initWebcam();
-	}
-	
-	public static String getSpecificLine(JTextPane textPane, int lineNumber) {
-		StyledDocument doc = textPane.getStyledDocument();
-
-		Element root = doc.getDefaultRootElement();
-		Element lineElement = root.getElement(lineNumber);
-
-		int startOffset = lineElement.getStartOffset();
-		int endOffset = lineElement.getEndOffset();
-
-		try 
-		{
-			return doc.getText(startOffset, endOffset - startOffset);
-		} 
-		catch (BadLocationException e) 
-		{
-			e.printStackTrace();
-			return null;
-		}
 	}
 	
 	@SuppressWarnings("unchecked")
