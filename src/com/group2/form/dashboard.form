@@ -57,7 +57,7 @@
         <Container class="javax.swing.JPanel" name="qrReaderPanel">
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="1130" y="0" width="780" height="1080"/>
+              <AbsoluteConstraints x="120" y="10" width="1800" height="1080"/>
             </Constraint>
           </Constraints>
 
@@ -73,7 +73,7 @@
         <Component class="javax.swing.JLabel" name="jLabel1">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/com/group2/background/BGMain.jpg"/>
+              <Image iconType="2" name="C:\Users\Arvey\Documents\NetBeansProjects\PF-101_Final-Proj\src\com\group2\background\DASH.jpg"/>
             </Property>
             <Property name="alignmentX" type="float" value="0.5"/>
           </Properties>
