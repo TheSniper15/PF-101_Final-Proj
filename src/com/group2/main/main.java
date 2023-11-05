@@ -1,6 +1,6 @@
 package com.group2.main;
 
-import com.group2.form.*;
+import com.group2.frame.log_in;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -12,32 +12,32 @@ public class main extends javax.swing.JFrame {
 	}
 
 	@SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
-    private void initComponents() {
+        // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+        private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
-        Loading = new javax.swing.JProgressBar();
-        background = new javax.swing.JLabel();
+                jPanel1 = new javax.swing.JPanel();
+                Loading = new javax.swing.JProgressBar();
+                background = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(1920, 1080));
-        setMinimumSize(new java.awt.Dimension(1920, 1080));
-        setUndecorated(true);
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+                setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+                setMaximumSize(new java.awt.Dimension(1920, 1080));
+                setMinimumSize(new java.awt.Dimension(1920, 1080));
+                setUndecorated(true);
+                getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setMaximumSize(new java.awt.Dimension(1920, 1080));
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+                jPanel1.setMaximumSize(new java.awt.Dimension(1920, 1080));
+                jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        Loading.setPreferredSize(new java.awt.Dimension(146, 3));
-        jPanel1.add(Loading, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 950, 1060, 30));
+                Loading.setPreferredSize(new java.awt.Dimension(146, 3));
+                jPanel1.add(Loading, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 950, 1060, 30));
 
-        background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/group2/background/Loadingbackground2nd.jpg"))); // NOI18N
-        jPanel1.add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+                background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/group2/background/Loadingbackground2nd.jpg"))); // NOI18N
+                jPanel1.add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1920, 1080));
+                getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1920, 1080));
 
-        pack();
-    }// </editor-fold>//GEN-END:initComponents
+                pack();
+        }// </editor-fold>//GEN-END:initComponents
 
 	/**
 	 * @param args the command line arguments
@@ -94,9 +94,9 @@ public class main extends javax.swing.JFrame {
 
 	
 	
-    // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JProgressBar Loading;
-    private javax.swing.JLabel background;
-    private javax.swing.JPanel jPanel1;
-    // End of variables declaration//GEN-END:variables
+        // Variables declaration - do not modify//GEN-BEGIN:variables
+        private javax.swing.JProgressBar Loading;
+        private javax.swing.JLabel background;
+        private javax.swing.JPanel jPanel1;
+        // End of variables declaration//GEN-END:variables
 }
