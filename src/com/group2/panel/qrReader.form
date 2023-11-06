@@ -41,7 +41,7 @@
               <EmptySpace pref="17" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <Component id="jTextField3" min="-2" pref="766" max="-2" attributes="0"/>
+                      <Component id="title_TextField" min="-2" pref="766" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
@@ -55,11 +55,11 @@
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                       <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <Component id="jTextField2" min="-2" pref="760" max="-2" attributes="0"/>
+                                  <Component id="fullName_TextField" min="-2" pref="760" max="-2" attributes="0"/>
                                   <Group type="102" alignment="0" attributes="0">
-                                      <Component id="jTextField4" min="-2" pref="387" max="-2" attributes="0"/>
+                                      <Component id="course_TextField" min="-2" pref="387" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="jTextField5" min="-2" pref="369" max="-2" attributes="0"/>
+                                      <Component id="year_TextField" min="-2" pref="369" max="-2" attributes="0"/>
                                   </Group>
                                   <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
@@ -71,7 +71,7 @@
                               <EmptySpace min="-2" pref="562" max="-2" attributes="0"/>
                               <Component id="ExirtButton1" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <Component id="jTextField6" alignment="0" min="-2" pref="760" max="-2" attributes="0"/>
+                          <Component id="timeDateYear_TextField" alignment="0" min="-2" pref="760" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
                   </Group>
@@ -90,18 +90,18 @@
                   <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Component id="jTextField2" min="-2" pref="54" max="-2" attributes="0"/>
+              <Component id="fullName_TextField" min="-2" pref="54" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jTextField4" alignment="3" min="-2" pref="54" max="-2" attributes="0"/>
-                  <Component id="jTextField5" alignment="3" min="-2" pref="54" max="-2" attributes="0"/>
+                  <Component id="course_TextField" alignment="3" min="-2" pref="54" max="-2" attributes="0"/>
+                  <Component id="year_TextField" alignment="3" min="-2" pref="54" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="jTextField3" min="-2" pref="54" max="-2" attributes="0"/>
+              <Component id="title_TextField" min="-2" pref="54" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="jTextField6" min="-2" pref="54" max="-2" attributes="0"/>
+              <Component id="timeDateYear_TextField" min="-2" pref="54" max="-2" attributes="0"/>
               <EmptySpace pref="58" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                   <Component id="SaveButton" max="32767" attributes="0"/>
@@ -141,7 +141,7 @@
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="CardButtonMouseClicked"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JTextField" name="jTextField2">
+    <Component class="javax.swing.JTextField" name="fullName_TextField">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="MS UI Gothic" size="36" style="1"/>
@@ -149,7 +149,7 @@
         <Property name="text" type="java.lang.String" value="FullName:"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField2ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fullName_TextFieldActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="SaveButton">
@@ -172,7 +172,7 @@
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="CancelButtonMouseClicked"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JTextField" name="jTextField4">
+    <Component class="javax.swing.JTextField" name="course_TextField">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="MS UI Gothic" size="36" style="1"/>
@@ -180,7 +180,7 @@
         <Property name="text" type="java.lang.String" value="Course: "/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField4ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="course_TextFieldActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel1">
@@ -196,18 +196,20 @@
         </Property>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="jTextField3">
+    <Component class="javax.swing.JTextField" name="title_TextField">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="MS UI Gothic" size="36" style="1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Title:"/>
+        <Property name="text" type="java.lang.String" value="Book: "/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField3ActionPerformed"/>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="title_TextFieldMouseClicked"/>
+        <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="title_TextFieldMouseExited"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="title_TextFieldActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JTextField" name="jTextField5">
+    <Component class="javax.swing.JTextField" name="year_TextField">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="MS UI Gothic" size="36" style="1"/>
@@ -215,10 +217,10 @@
         <Property name="text" type="java.lang.String" value="Year:"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField5ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="year_TextFieldActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JTextField" name="jTextField6">
+    <Component class="javax.swing.JTextField" name="timeDateYear_TextField">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="MS UI Gothic" size="36" style="1"/>
@@ -226,7 +228,7 @@
         <Property name="text" type="java.lang.String" value="TIME-[D/M/Y]:"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField6ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="timeDateYear_TextFieldActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="ExirtButton1">
