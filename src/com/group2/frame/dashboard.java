@@ -48,8 +48,6 @@ public class dashboard extends javax.swing.JFrame {
 		qrReaderPanel.add(qrrd);
 	}
 
-
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;

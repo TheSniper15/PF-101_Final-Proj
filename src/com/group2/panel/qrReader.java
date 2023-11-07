@@ -224,7 +224,7 @@ public class qrReader extends javax.swing.JPanel implements Runnable,ThreadFacto
 	}
         
         getLineModel gl = new getLineModel();
-        public String name, fname, lname, mi, ay, course;
+        public String name, fname, lname, mi, ay, course, condi;
 	
 	@Override
 	public void run()
@@ -324,11 +324,6 @@ public class qrReader extends javax.swing.JPanel implements Runnable,ThreadFacto
         // TODO add your handling code here:
     }//GEN-LAST:event_timeDateYear_TextFieldActionPerformed
 
-    private void ExirtButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ExirtButton1MouseClicked
-        new log_in().setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_ExirtButton1MouseClicked
-
     private void title_TextFieldMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_title_TextFieldMouseClicked
         // TODO add your handling code here:
     }//GEN-LAST:event_title_TextFieldMouseClicked
@@ -337,6 +332,10 @@ public class qrReader extends javax.swing.JPanel implements Runnable,ThreadFacto
         // TODO add your handling code here:
         title_TextField.setText("Book: ");
     }//GEN-LAST:event_title_TextFieldMouseExited
+
+    private void ExirtButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ExirtButton1MouseClicked
+        System.exit(0);
+    }//GEN-LAST:event_ExirtButton1MouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
