@@ -90,8 +90,6 @@ public class main extends javax.swing.JFrame {
 		m.dispose(); 
 	}
         
-
-	
 	
         // Variables declaration - do not modify//GEN-BEGIN:variables
         private javax.swing.JProgressBar Loading;
