@@ -1,6 +1,6 @@
 package com.group2.main;
 
-import com.group2.frame.log_in;
+import com.group2.frame.login;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -67,7 +67,7 @@ public class main extends javax.swing.JFrame {
 
 		/* Create and display the Loading form */
 		main m = new main();
-		log_in login = new log_in();
+		login login = new login();
 		
 		m.setVisible(true);
 		
