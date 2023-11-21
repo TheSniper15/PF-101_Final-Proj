@@ -1,10 +1,48 @@
 package com.group2.frame;
 
-public class log_in extends javax.swing.JFrame {
+import com.group2.myClass.*;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 
-	public log_in() {
+public class login extends javax.swing.JFrame {
+
+	public login() {
 		initComponents();
 		HidePassword.setVisible(false);
+		db.Connect();
+	}
+	
+	databaseCon db = new databaseCon();
+	
+	private void logincom()
+	{
+		String usr = InputUsername.getText();
+		String pswd = new String(InputPassword.getPassword());
+		String stat;
+		
+		try
+		{
+			db.pst = db.con.prepareStatement("SELECT * FROM librarians where username = ? and password = ?");
+			db.pst.setString(1, usr);
+			db.pst.setString(2,pswd);
+			db.rs = db.pst.executeQuery();
+			
+			if(db.rs.next())
+			{
+				new dashboard().setVisible(true);
+				this.dispose();
+			}
+			else
+			{
+				JOptionPane.showMessageDialog(this, "Username or Password is Incorrect!!");
+			}
+		}
+		catch(SQLException ex)
+		{
+			Logger.getLogger(login.class.getName()).log(Level.SEVERE, null, ex);
+		}
 	}
 
 	@SuppressWarnings("unchecked")
@@ -104,8 +142,7 @@ public class log_in extends javax.swing.JFrame {
         }// </editor-fold>//GEN-END:initComponents
 
     private void LoginButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LoginButtonMouseClicked
-        new dashboard().setVisible(true);
-        this.dispose();
+        logincom();
     }//GEN-LAST:event_LoginButtonMouseClicked
 
     private void InputUsernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InputUsernameActionPerformed
