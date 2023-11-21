@@ -16,7 +16,7 @@ public class databaseCon
 	
 	private final String uName = "root";
 	private final String pass = "";
-	private final String host = "jdbc:mysql://localhost:3306/";
+	private final String host = "jdbc:mysql://localhost:3306/library";
 	
 	public void Connect()
 	{
