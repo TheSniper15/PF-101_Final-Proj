@@ -225,9 +225,10 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="MS UI Gothic" size="36" style="1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="TIME-[D/M/Y]:"/>
+        <Property name="text" type="java.lang.String" value="[Y/M/D]-TIME"/>
       </Properties>
       <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="timeDateYear_TextFieldMouseClicked"/>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="timeDateYear_TextFieldActionPerformed"/>
       </Events>
     </Component>
