@@ -39,7 +39,6 @@ public class qrReader extends javax.swing.JPanel implements Runnable,ThreadFacto
         jScrollPane1 = new javax.swing.JScrollPane();
         result_field = new javax.swing.JTextPane();
         wbcmPanel = new javax.swing.JPanel();
-        CardButton = new javax.swing.JLabel();
         fullName_TextField = new javax.swing.JTextField();
         SaveButton = new javax.swing.JLabel();
         CancelButton = new javax.swing.JLabel();
@@ -49,7 +48,13 @@ public class qrReader extends javax.swing.JPanel implements Runnable,ThreadFacto
         year_TextField = new javax.swing.JTextField();
         timeDateYear_TextField = new javax.swing.JTextField();
         ExirtButton1 = new javax.swing.JLabel();
-        title_TextField1 = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        year_TextField1 = new javax.swing.JTextField();
 
         jScrollPane1.setViewportView(result_field);
 
@@ -61,15 +66,7 @@ public class qrReader extends javax.swing.JPanel implements Runnable,ThreadFacto
         wbcmPanel.setPreferredSize(new java.awt.Dimension(294, 150));
         wbcmPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        CardButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/group2/icon/PSAU_I.D 2.png"))); // NOI18N
-        CardButton.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                CardButtonMouseClicked(evt);
-            }
-        });
-
         fullName_TextField.setFont(new java.awt.Font("MS UI Gothic", 1, 36)); // NOI18N
-        fullName_TextField.setText("FullName:");
         fullName_TextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 fullName_TextFieldActionPerformed(evt);
@@ -91,7 +88,6 @@ public class qrReader extends javax.swing.JPanel implements Runnable,ThreadFacto
         });
 
         course_TextField.setFont(new java.awt.Font("MS UI Gothic", 1, 36)); // NOI18N
-        course_TextField.setText("Course: ");
         course_TextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 course_TextFieldActionPerformed(evt);
@@ -103,7 +99,6 @@ public class qrReader extends javax.swing.JPanel implements Runnable,ThreadFacto
         jLabel1.setForeground(new java.awt.Color(0, 0, 0));
 
         title_TextField.setFont(new java.awt.Font("MS UI Gothic", 1, 36)); // NOI18N
-        title_TextField.setText("Book: ");
         title_TextField.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 title_TextFieldMouseClicked(evt);
@@ -119,7 +114,6 @@ public class qrReader extends javax.swing.JPanel implements Runnable,ThreadFacto
         });
 
         year_TextField.setFont(new java.awt.Font("MS UI Gothic", 1, 36)); // NOI18N
-        year_TextField.setText("Year:");
         year_TextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 year_TextFieldActionPerformed(evt);
@@ -127,7 +121,6 @@ public class qrReader extends javax.swing.JPanel implements Runnable,ThreadFacto
         });
 
         timeDateYear_TextField.setFont(new java.awt.Font("MS UI Gothic", 1, 36)); // NOI18N
-        timeDateYear_TextField.setText("[Y/M/D]-TIME");
         timeDateYear_TextField.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 timeDateYear_TextFieldMouseClicked(evt);
@@ -146,19 +139,38 @@ public class qrReader extends javax.swing.JPanel implements Runnable,ThreadFacto
             }
         });
 
-        title_TextField1.setFont(new java.awt.Font("MS UI Gothic", 1, 36)); // NOI18N
-        title_TextField1.setText("Book: ");
-        title_TextField1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                title_TextField1MouseClicked(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                title_TextField1MouseExited(evt);
-            }
-        });
-        title_TextField1.addActionListener(new java.awt.event.ActionListener() {
+        jLabel2.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel2.setFont(new java.awt.Font("MS UI Gothic", 1, 36)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel2.setText("Fullname:");
+
+        jLabel3.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel3.setFont(new java.awt.Font("MS UI Gothic", 1, 36)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel3.setText("Course:");
+
+        jLabel4.setFont(new java.awt.Font("MS UI Gothic", 1, 36)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel4.setText("Year:");
+
+        jLabel5.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel5.setFont(new java.awt.Font("MS UI Gothic", 1, 36)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel5.setText("Book:");
+
+        jLabel6.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel6.setFont(new java.awt.Font("MS UI Gothic", 1, 36)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel6.setText("Date:");
+
+        jLabel7.setFont(new java.awt.Font("MS UI Gothic", 1, 36)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel7.setText("Status: ");
+
+        year_TextField1.setFont(new java.awt.Font("MS UI Gothic", 1, 36)); // NOI18N
+        year_TextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                title_TextField1ActionPerformed(evt);
+                year_TextField1ActionPerformed(evt);
             }
         });
 
@@ -169,29 +181,42 @@ public class qrReader extends javax.swing.JPanel implements Runnable,ThreadFacto
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(17, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(wbcmPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 760, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(SaveButton)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(CancelButton)
-                        .addGap(562, 562, 562)
-                        .addComponent(ExirtButton1))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(4, 4, 4)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(CardButton)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGap(76, 76, 76)
                                 .addComponent(jLabel1))
-                            .addComponent(fullName_TextField, javax.swing.GroupLayout.PREFERRED_SIZE, 760, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addGap(1, 1, 1)
+                                .addComponent(SaveButton)
+                                .addGap(18, 18, 18)
+                                .addComponent(CancelButton)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(ExirtButton1))
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(course_TextField, javax.swing.GroupLayout.PREFERRED_SIZE, 387, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel2)
+                                    .addComponent(jLabel3)
+                                    .addComponent(jLabel5)
+                                    .addComponent(jLabel6)
+                                    .addComponent(jLabel4))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(year_TextField, javax.swing.GroupLayout.PREFERRED_SIZE, 369, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(title_TextField1)
-                            .addComponent(title_TextField)
-                            .addComponent(timeDateYear_TextField))))
-                .addGap(17, 17, 17))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(fullName_TextField, javax.swing.GroupLayout.DEFAULT_SIZE, 600, Short.MAX_VALUE)
+                                    .addComponent(title_TextField, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(timeDateYear_TextField, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(course_TextField)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(year_TextField, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jLabel7)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(year_TextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                        .addGap(0, 23, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(wbcmPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 760, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(17, 17, 17))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -199,27 +224,34 @@ public class qrReader extends javax.swing.JPanel implements Runnable,ThreadFacto
                 .addGap(18, 18, 18)
                 .addComponent(wbcmPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 500, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(CardButton)
-                    .addComponent(jLabel1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(fullName_TextField, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLabel1)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(fullName_TextField, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel2))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(course_TextField, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(year_TextField, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(title_TextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(4, 4, 4)
-                .addComponent(title_TextField, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel3))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(timeDateYear_TextField, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 58, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(SaveButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(CancelButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(ExirtButton1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(42, 42, 42))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel4)
+                    .addComponent(year_TextField, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel7)
+                    .addComponent(year_TextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(66, 66, 66)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(title_TextField, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel5))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel6)
+                    .addComponent(timeDateYear_TextField, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 114, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(SaveButton, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(ExirtButton1, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(CancelButton, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addGap(31, 31, 31))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -314,10 +346,6 @@ public class qrReader extends javax.swing.JPanel implements Runnable,ThreadFacto
 		return t;
 	}
 	
-        private void CardButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CardButtonMouseClicked
-                // TODO add your handling code here:
-        }//GEN-LAST:event_CardButtonMouseClicked
-
         private void fullName_TextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fullName_TextFieldActionPerformed
                 // TODO add your handling code here:
         }//GEN-LAST:event_fullName_TextFieldActionPerformed
@@ -372,33 +400,30 @@ public class qrReader extends javax.swing.JPanel implements Runnable,ThreadFacto
 		currentTimeDate();
         }//GEN-LAST:event_timeDateYear_TextFieldMouseClicked
 
-    private void title_TextField1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_title_TextField1MouseClicked
+    private void year_TextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_year_TextField1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_title_TextField1MouseClicked
-
-    private void title_TextField1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_title_TextField1MouseExited
-        // TODO add your handling code here:
-    }//GEN-LAST:event_title_TextField1MouseExited
-
-    private void title_TextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_title_TextField1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_title_TextField1ActionPerformed
+    }//GEN-LAST:event_year_TextField1ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel CancelButton;
-    private javax.swing.JLabel CardButton;
     private javax.swing.JLabel ExirtButton1;
     private javax.swing.JLabel SaveButton;
     private javax.swing.JTextField course_TextField;
     private javax.swing.JTextField fullName_TextField;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextPane result_field;
     private javax.swing.JTextField timeDateYear_TextField;
     private javax.swing.JTextField title_TextField;
-    private javax.swing.JTextField title_TextField1;
     private javax.swing.JPanel wbcmPanel;
     private javax.swing.JTextField year_TextField;
+    private javax.swing.JTextField year_TextField1;
     // End of variables declaration//GEN-END:variables
 }

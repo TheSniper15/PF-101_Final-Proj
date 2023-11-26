@@ -40,9 +40,9 @@ public class dashboard extends javax.swing.JFrame {
         hstory.setMaximumSize(new java.awt.Dimension(800, 1080));
         hstory.setMinimumSize(new java.awt.Dimension(800, 1080));
         hstory.setPreferredSize(new java.awt.Dimension(800, 1080));
-        jPanel1.add(hstory, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, -1, -1));
+        jPanel1.add(hstory, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 810, -1));
 
-        bgPic.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/group2/background/DASH.jpg"))); // NOI18N
+        bgPic.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/group2/background/Libsys_dashboard2.jpg"))); // NOI18N
         bgPic.setAlignmentX(0.5F);
         jPanel1.add(bgPic, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1920, 1080));
 
