@@ -53,14 +53,14 @@
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="430" y="950" width="1060" height="30"/>
+              <AbsoluteConstraints x="0" y="1050" width="1920" height="30"/>
             </Constraint>
           </Constraints>
         </Component>
         <Component class="javax.swing.JLabel" name="background">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/com/group2/background/Loadingbackground2nd.jpg"/>
+              <Image iconType="3" name="/com/group2/background/Libsys-loading.jpg"/>
             </Property>
           </Properties>
           <Constraints>
