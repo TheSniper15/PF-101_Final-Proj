@@ -27,6 +27,7 @@ public class historyTable extends javax.swing.JPanel {
 
         setMaximumSize(new java.awt.Dimension(800, 1080));
         setMinimumSize(new java.awt.Dimension(800, 1080));
+        setName(""); // NOI18N
         setPreferredSize(new java.awt.Dimension(800, 1080));
 
         historyTbl.setModel(new javax.swing.table.DefaultTableModel(
@@ -50,7 +51,7 @@ public class historyTable extends javax.swing.JPanel {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(spHistoryTbl, javax.swing.GroupLayout.PREFERRED_SIZE, 915, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(spHistoryTbl, javax.swing.GroupLayout.DEFAULT_SIZE, 1080, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
 

@@ -18,8 +18,9 @@ public class dashboard extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        qrReaderPanel = new javax.swing.JPanel();
         hstory = new javax.swing.JPanel();
+        ExirtButton1 = new javax.swing.JLabel();
+        qrReaderPanel = new javax.swing.JPanel();
         bgPic = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -33,14 +34,22 @@ public class dashboard extends javax.swing.JFrame {
         jPanel1.setPreferredSize(new java.awt.Dimension(1920, 1080));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        qrReaderPanel.setPreferredSize(new java.awt.Dimension(800, 1080));
-        qrReaderPanel.setLayout(new java.awt.BorderLayout());
-        jPanel1.add(qrReaderPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(1110, 0, -1, -1));
-
         hstory.setMaximumSize(new java.awt.Dimension(800, 1080));
         hstory.setMinimumSize(new java.awt.Dimension(800, 1080));
         hstory.setPreferredSize(new java.awt.Dimension(800, 1080));
         jPanel1.add(hstory, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 810, -1));
+
+        ExirtButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/group2/icon/logout (2).png"))); // NOI18N
+        ExirtButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ExirtButton1MouseClicked(evt);
+            }
+        });
+        jPanel1.add(ExirtButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1840, 990, -1, -1));
+
+        qrReaderPanel.setPreferredSize(new java.awt.Dimension(800, 1080));
+        qrReaderPanel.setLayout(new java.awt.BorderLayout());
+        jPanel1.add(qrReaderPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(1110, 0, -1, -1));
 
         bgPic.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/group2/background/Libsys_dashboard2.jpg"))); // NOI18N
         bgPic.setAlignmentX(0.5F);
@@ -50,6 +59,11 @@ public class dashboard extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void ExirtButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ExirtButton1MouseClicked
+        new login().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_ExirtButton1MouseClicked
 
 	public void qrReader()
 	{
@@ -62,6 +76,7 @@ public class dashboard extends javax.swing.JFrame {
 	}
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel ExirtButton1;
     private javax.swing.JLabel bgPic;
     private javax.swing.JPanel hstory;
     private javax.swing.JPanel jPanel1;
