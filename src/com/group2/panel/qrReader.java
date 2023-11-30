@@ -23,9 +23,11 @@ import java.util.logging.Logger;
 
 public class qrReader extends javax.swing.JPanel implements Runnable,ThreadFactory{
 
+	public Webcam webcam;
 	private WebcamPanel panel;
-	private Webcam webcam;
 	private Executor executor = Executors.newSingleThreadExecutor(this);
+	
+	public boolean condi = false;
 	
 	public qrReader() {
 		initComponents();
@@ -262,6 +264,11 @@ public class qrReader extends javax.swing.JPanel implements Runnable,ThreadFacto
         );
     }// </editor-fold>//GEN-END:initComponents
 
+	public void out()
+	{
+		System.exit(0);
+	}
+    
 	public void initWebcam()
 	{
 		Dimension size = WebcamResolution.QVGA.getSize();
@@ -286,7 +293,7 @@ public class qrReader extends javax.swing.JPanel implements Runnable,ThreadFacto
 	}
         
         getLineModel gl = new getLineModel();
-        public String name, fname, lname, mi, ay, course, condi;
+        public String name, fname, lname, mi, ay, course;
 	
 	@Override
 	public void run()
@@ -340,6 +347,11 @@ public class qrReader extends javax.swing.JPanel implements Runnable,ThreadFacto
                                 fullName_TextField.setText(name);
                                 course_TextField.setText(course);
                                 year_TextField.setText(ay);
+			}
+			
+			if(condi == true)
+			{
+				break;
 			}
 		}
 		while(true);

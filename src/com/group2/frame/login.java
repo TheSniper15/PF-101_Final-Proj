@@ -4,6 +4,7 @@ import com.group2.myClass.*;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
 public class login extends javax.swing.JFrame {
@@ -159,7 +160,11 @@ public class login extends javax.swing.JFrame {
     }//GEN-LAST:event_ShowPasswordMouseClicked
 
     private void ExirtButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ExirtButton1MouseClicked
-        System.exit(0);
+        JFrame frame = new JFrame("Exit");
+		if(JOptionPane.showConfirmDialog(frame, "Confirm if you want to Sign Out?", "Library System", JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION)
+		{
+			System.exit(0);
+		}
     }//GEN-LAST:event_ExirtButton1MouseClicked
 
     private void HidePasswordMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_HidePasswordMouseClicked
