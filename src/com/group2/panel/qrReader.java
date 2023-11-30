@@ -321,7 +321,7 @@ public class qrReader extends javax.swing.JPanel implements Runnable,ThreadFacto
 	}
 	
 	public void saveact()
-	{
+	{	
 		try
 		{
 			String nm = fullName_TextField.getText();
