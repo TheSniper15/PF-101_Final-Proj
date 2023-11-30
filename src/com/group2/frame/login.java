@@ -21,7 +21,7 @@ public class login extends javax.swing.JFrame {
 	{
 		String usr = InputUsername.getText();
 		String pswd = new String(InputPassword.getPassword());
-		String stat;
+		String stat = "Admin";
 		
 		try
 		{
@@ -32,8 +32,22 @@ public class login extends javax.swing.JFrame {
 			
 			if(db.rs.next())
 			{
-				new dashboard().setVisible(true);
-				this.dispose();
+				db.pst = db.con.prepareStatement("SELECT * FROM librarians where username = ? and password = ? and Status = ?");
+				db.pst.setString(1, usr);
+				db.pst.setString(2,pswd);
+				db.pst.setString(3,stat);
+				db.rs = db.pst.executeQuery();
+			
+				if(db.rs.next())
+				{
+					new adminFrame().setVisible(true);
+					this.dispose();
+				}
+				else
+				{
+					new dashboard().setVisible(true);
+					this.dispose();
+				}
 			}
 			else
 			{
@@ -166,10 +180,10 @@ public class login extends javax.swing.JFrame {
 
     private void ExirtButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ExirtButton1MouseClicked
         JFrame frame = new JFrame("Exit");
-		if(JOptionPane.showConfirmDialog(frame, "Confirm if you want to Sign Out?", "Library System", JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION)
-		{
-			System.exit(0);
-		}
+	if(JOptionPane.showConfirmDialog(frame, "Confirm if you want to Exit?", "Library System", JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION)
+	{
+		System.exit(0);
+	}
     }//GEN-LAST:event_ExirtButton1MouseClicked
 
     private void HidePasswordMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_HidePasswordMouseClicked
