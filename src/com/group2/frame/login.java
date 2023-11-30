@@ -179,7 +179,9 @@ public class login extends javax.swing.JFrame {
     }//GEN-LAST:event_ShowPasswordMouseClicked
 
     private void ExirtButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ExirtButton1MouseClicked
-        JFrame frame = new JFrame("Exit");
+        
+	JFrame frame = new JFrame("Exit");
+	
 	if(JOptionPane.showConfirmDialog(frame, "Confirm if you want to Exit?", "Library System", JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION)
 	{
 		System.exit(0);
