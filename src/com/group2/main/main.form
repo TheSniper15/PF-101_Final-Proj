@@ -60,7 +60,7 @@
         <Component class="javax.swing.JLabel" name="background">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/com/group2/background/Libsys-loading.jpg"/>
+              <Image iconType="3" name="/com/group2/background/LOADING.jpg"/>
             </Property>
           </Properties>
           <Constraints>

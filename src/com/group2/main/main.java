@@ -30,7 +30,7 @@ public class main extends javax.swing.JFrame {
         Loading.setPreferredSize(new java.awt.Dimension(146, 3));
         jPanel1.add(Loading, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 1050, 1920, 30));
 
-        background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/group2/background/Libsys-loading.jpg"))); // NOI18N
+        background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/group2/background/LOADING.jpg"))); // NOI18N
         jPanel1.add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1920, 1080));

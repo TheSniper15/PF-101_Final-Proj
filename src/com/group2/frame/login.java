@@ -70,8 +70,8 @@ public class login extends javax.swing.JFrame {
         jPanel1.setPreferredSize(new java.awt.Dimension(1920, 1080));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        LoginButton.setFont(new java.awt.Font("MS UI Gothic", 1, 48)); // NOI18N
-        LoginButton.setForeground(new java.awt.Color(0, 0, 0));
+        LoginButton.setFont(new java.awt.Font("MS UI Gothic", 1, 50)); // NOI18N
+        LoginButton.setForeground(new java.awt.Color(255, 255, 255));
         LoginButton.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         LoginButton.setText("LOGIN");
         LoginButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -80,7 +80,12 @@ public class login extends javax.swing.JFrame {
                 LoginButtonMouseClicked(evt);
             }
         });
-        jPanel1.add(LoginButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 790, 400, 80));
+        LoginButton.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                LoginButtonKeyPressed(evt);
+            }
+        });
+        jPanel1.add(LoginButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 780, 360, 120));
 
         ShowPassword.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/group2/icon/show.png"))); // NOI18N
         ShowPassword.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -134,7 +139,7 @@ public class login extends javax.swing.JFrame {
         });
         jPanel1.add(ExirtButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1830, 980, 70, 80));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/group2/background/Libsys_login.jpg"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/group2/background/LOGIN.jpg"))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
@@ -183,6 +188,10 @@ public class login extends javax.swing.JFrame {
         HidePassword.setVisible(false);
         InputPassword.setEchoChar('*');
     }//GEN-LAST:event_HidePasswordMousePressed
+
+    private void LoginButtonKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_LoginButtonKeyPressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_LoginButtonKeyPressed
 
 	/**
 	 * @param args the command line arguments
