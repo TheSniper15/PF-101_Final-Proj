@@ -161,7 +161,7 @@ public class login extends javax.swing.JFrame {
 
     private void ExirtButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ExirtButton1MouseClicked
         JFrame frame = new JFrame("Exit");
-		if(JOptionPane.showConfirmDialog(frame, "Confirm if you want to Sign Out?", "Library System", JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION)
+		if(JOptionPane.showConfirmDialog(frame, "Confirm if you want to Exit?", "Library System", JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION)
 		{
 			System.exit(0);
 		}
