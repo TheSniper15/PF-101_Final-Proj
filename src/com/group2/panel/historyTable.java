@@ -3,29 +3,64 @@ package com.group2.panel;
 import java.awt.Color;
 
 import com.group2.swing.*;
-
 import com.group2.myClass.*;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import java.util.Vector;
+import java.sql.SQLException;
+import javax.swing.table.DefaultTableModel;
 
 
 public class historyTable extends javax.swing.JPanel {
 
-	public historyTable() {
-		initComponents();
-		tbl();
-                db.Connect();
-	}
-        
-        databaseCon db = new databaseCon();
-	
-	public void tbl()
-	{
-		spHistoryTbl.setVerticalScrollBar(new ScrollBar());
-		spHistoryTbl.getVerticalScrollBar().setBackground(Color.WHITE);
-		spHistoryTbl.getViewport().setBackground(Color.WHITE);
-	}
+    public historyTable() {
+        initComponents();
+        tbl();
+        db.Connect();
+        retrieveData();
+    }
 
-	@SuppressWarnings("unchecked")
+    databaseCon db = new databaseCon();
+
+    public void tbl() {
+        spHistoryTbl.setVerticalScrollBar(new ScrollBar());
+        spHistoryTbl.getVerticalScrollBar().setBackground(Color.WHITE);
+        spHistoryTbl.getViewport().setBackground(Color.WHITE);
+    }
+
+    public void retrieveData() {
+        try {
+            int q;
+            db.pst = db.con.prepareStatement("SELECT * FROM history");
+            db.rs = db.pst.executeQuery();
+            java.sql.ResultSetMetaData rss = db.rs.getMetaData();
+            q = rss.getColumnCount();  
+
+            DefaultTableModel df = (DefaultTableModel) historyTbl.getModel();
+            df.setRowCount(0);
+
+            while (db.rs.next()) {
+                Vector v2 = new Vector();
+                for (int a = 1; a  <= q ; a++) {
+                    v2.add(db.rs.getString("ID"));
+                    v2.add(db.rs.getString("NAME"));
+                    v2.add(db.rs.getString("COURSE"));
+                    v2.add(db.rs.getString("YEAR"));
+                    v2.add(db.rs.getString("BOOK"));
+                    v2.add(db.rs.getString("STATUS"));
+                    v2.add(db.rs.getString("DATE"));
+
+                }
+                df.addRow(v2);
+            }
+
+        } catch (SQLException ex) {
+            Logger.getLogger(historyTable.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+ 
+    @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 

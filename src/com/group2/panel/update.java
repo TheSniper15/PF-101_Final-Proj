@@ -4,6 +4,13 @@
  */
 package com.group2.panel;
 
+import com.group2.myClass.databaseCon;
+import java.sql.SQLException;
+import java.util.Vector;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author Arvy
@@ -15,6 +22,39 @@ public class update extends javax.swing.JPanel {
      */
     public update() {
         initComponents();
+        db.Connect();
+        retrieveData();
+    }
+    
+        databaseCon db = new databaseCon();
+        
+    public void retrieveData(){
+        try {
+            int q;
+            db.pst = db.con.prepareStatement("SELECT * FROM librarians");
+            db.rs = db.pst.executeQuery();
+            java.sql.ResultSetMetaData rss = db.rs.getMetaData();
+            q = rss.getColumnCount(); 
+            
+            DefaultTableModel df = (DefaultTableModel) userTable.getModel();
+            df.setRowCount(0);
+            
+            while (db.rs.next()) {
+                Vector v2 = new Vector();
+                for (int a = 1; a  <= q ; a++) {
+                    v2.add(db.rs.getString("ID"));
+                    v2.add(db.rs.getString("USERNAME"));
+                    v2.add(db.rs.getString("PASSWORD"));
+                    v2.add(db.rs.getString("STATUS"));
+               
+
+                }
+                df.addRow(v2);
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(update.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
     }
 
     /**
@@ -27,7 +67,7 @@ public class update extends javax.swing.JPanel {
     private void initComponents() {
 
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        userTable = new javax.swing.JTable();
         jComboBox2 = new javax.swing.JComboBox<>();
         jTextField1 = new javax.swing.JTextField();
         jTextField2 = new javax.swing.JTextField();
@@ -41,7 +81,7 @@ public class update extends javax.swing.JPanel {
         setMinimumSize(new java.awt.Dimension(710, 1000));
         setPreferredSize(new java.awt.Dimension(710, 1000));
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        userTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -148,14 +188,14 @@ public class update extends javax.swing.JPanel {
                 "ID", "USERNAME", "PASSWORD", "STATUS"
             }
         ));
-        jTable1.setMaximumSize(new java.awt.Dimension(1000, 1000));
-        jTable1.setMinimumSize(new java.awt.Dimension(1000, 1000));
-        jTable1.setPreferredSize(new java.awt.Dimension(1000, 1000));
-        jTable1.setShowGrid(true);
-        jScrollPane1.setViewportView(jTable1);
-        if (jTable1.getColumnModel().getColumnCount() > 0) {
-            jTable1.getColumnModel().getColumn(1).setPreferredWidth(100);
-            jTable1.getColumnModel().getColumn(2).setPreferredWidth(100);
+        userTable.setMaximumSize(new java.awt.Dimension(1000, 1000));
+        userTable.setMinimumSize(new java.awt.Dimension(1000, 1000));
+        userTable.setPreferredSize(new java.awt.Dimension(1000, 1000));
+        userTable.setShowGrid(true);
+        jScrollPane1.setViewportView(userTable);
+        if (userTable.getColumnModel().getColumnCount() > 0) {
+            userTable.getColumnModel().getColumn(1).setPreferredWidth(100);
+            userTable.getColumnModel().getColumn(2).setPreferredWidth(100);
         }
 
         jComboBox2.setFont(new java.awt.Font("MS UI Gothic", 1, 18)); // NOI18N
@@ -289,8 +329,8 @@ public class update extends javax.swing.JPanel {
     private javax.swing.JLabel Update;
     private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
+    private javax.swing.JTable userTable;
     // End of variables declaration//GEN-END:variables
 }

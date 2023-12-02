@@ -3,6 +3,7 @@ package com.group2.myClass;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import com.mysql.cj.jdbc.result.ResultSetMetaData;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.logging.Level;
@@ -13,6 +14,7 @@ public class databaseCon
 	public Connection con;
 	public PreparedStatement pst;
 	public ResultSet rs;
+        public ResultSetMetaData rss;
 	
 	private final String uName = "root";
 	private final String pass = "";
