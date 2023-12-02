@@ -36,7 +36,8 @@ public class dashboard extends javax.swing.JFrame {
         jPanel1.setPreferredSize(new java.awt.Dimension(1920, 1080));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        hstory.setBackground(new java.awt.Color(211, 206, 202));
+        hstory.setBackground(new java.awt.Color (0,0,0,1));
+        hstory.setForeground(new java.awt.Color (0,0,0,1));
         hstory.setMaximumSize(new java.awt.Dimension(1000, 1000));
         hstory.setMinimumSize(new java.awt.Dimension(1000, 1000));
         hstory.setPreferredSize(new java.awt.Dimension(1000, 1000));

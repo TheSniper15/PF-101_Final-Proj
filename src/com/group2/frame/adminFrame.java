@@ -23,8 +23,10 @@ public class adminFrame extends javax.swing.JFrame {
         BG = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jComboBox2.setFont(new java.awt.Font("MS UI Gothic", 1, 24)); // NOI18N
         jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         jComboBox2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -43,15 +45,18 @@ public class adminFrame extends javax.swing.JFrame {
         SaveBtn.setFont(new java.awt.Font("MS UI Gothic", 1, 24)); // NOI18N
         SaveBtn.setForeground(new java.awt.Color(255, 255, 255));
         SaveBtn.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        SaveBtn.setText("SAVE");
+        SaveBtn.setText("DELETE");
         SaveBtn.setToolTipText("");
         SaveBtn.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 SaveBtnMouseClicked(evt);
             }
         });
-        getContentPane().add(SaveBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(1060, 120, 100, 40));
+        getContentPane().add(SaveBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(1060, 110, 100, 60));
 
+        userpanel.setBackground(new java.awt.Color (0,0,0,1));
+        userpanel.setForeground(new java.awt.Color (0,0,0,1));
+        userpanel.setToolTipText("");
         userpanel.setMaximumSize(new java.awt.Dimension(710, 1000));
         userpanel.setMinimumSize(new java.awt.Dimension(710, 1000));
         userpanel.setPreferredSize(new java.awt.Dimension(710, 1000));
@@ -89,7 +94,7 @@ public class adminFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_SaveBtnMouseClicked
 
     private void ExirtButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ExirtButton1MouseClicked
-      
+        System.exit(0);
     }//GEN-LAST:event_ExirtButton1MouseClicked
 
 
