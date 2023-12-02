@@ -4,12 +4,19 @@ import java.awt.Color;
 
 import com.group2.swing.*;
 
+import com.group2.myClass.*;
+
+
+
 public class historyTable extends javax.swing.JPanel {
 
 	public historyTable() {
 		initComponents();
 		tbl();
+                db.Connect();
 	}
+        
+        databaseCon db = new databaseCon();
 	
 	public void tbl()
 	{

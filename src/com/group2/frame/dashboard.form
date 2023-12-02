@@ -100,7 +100,7 @@
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="1110" y="0" width="-1" height="-1"/>
+              <AbsoluteConstraints x="1120" y="0" width="-1" height="-1"/>
             </Constraint>
           </Constraints>
 
@@ -109,7 +109,7 @@
         <Component class="javax.swing.JLabel" name="bgPic">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/com/group2/background/BACKGROUND.jpg"/>
+              <Image iconType="3" name="/com/group2/background/DASHBOARD_1.jpg"/>
             </Property>
             <Property name="alignmentX" type="float" value="0.5"/>
           </Properties>
