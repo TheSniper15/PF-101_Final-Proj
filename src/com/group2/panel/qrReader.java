@@ -39,274 +39,274 @@ public class qrReader extends javax.swing.JPanel implements Runnable,ThreadFacto
 	databaseCon db = new databaseCon();
 	
 	@SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
-    private void initComponents() {
+        // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+        private void initComponents() {
 
-        jScrollPane1 = new javax.swing.JScrollPane();
-        result_field = new javax.swing.JTextPane();
-        wbcmPanel = new javax.swing.JPanel();
-        fullName_TextField = new javax.swing.JTextField();
-        course_TextField = new javax.swing.JTextField();
-        jLabel1 = new javax.swing.JLabel();
-        title_TextField = new javax.swing.JTextField();
-        year_TextField = new javax.swing.JTextField();
-        timeDateYear_TextField = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        status_box = new javax.swing.JComboBox<>();
-        UpdateBtn = new javax.swing.JLabel();
-        SaveBtn = new javax.swing.JLabel();
-        DeleteBtn = new javax.swing.JLabel();
-        status_box1 = new javax.swing.JComboBox<>();
+                jScrollPane1 = new javax.swing.JScrollPane();
+                result_field = new javax.swing.JTextPane();
+                wbcmPanel = new javax.swing.JPanel();
+                fullName_TextField = new javax.swing.JTextField();
+                course_TextField = new javax.swing.JTextField();
+                jLabel1 = new javax.swing.JLabel();
+                title_TextField = new javax.swing.JTextField();
+                year_TextField = new javax.swing.JTextField();
+                timeDateYear_TextField = new javax.swing.JTextField();
+                jLabel2 = new javax.swing.JLabel();
+                jLabel3 = new javax.swing.JLabel();
+                jLabel4 = new javax.swing.JLabel();
+                jLabel5 = new javax.swing.JLabel();
+                jLabel6 = new javax.swing.JLabel();
+                jLabel7 = new javax.swing.JLabel();
+                status_box = new javax.swing.JComboBox<>();
+                UpdateBtn = new javax.swing.JLabel();
+                SaveBtn = new javax.swing.JLabel();
+                DeleteBtn = new javax.swing.JLabel();
+                status_box1 = new javax.swing.JComboBox<>();
 
-        jScrollPane1.setViewportView(result_field);
+                jScrollPane1.setViewportView(result_field);
 
-        setBackground(new java.awt.Color(0,0,0,1));
-        setForeground(new java.awt.Color(0,0,0,1));
+                setBackground(new java.awt.Color(0,0,0,1));
+                setForeground(new java.awt.Color(0,0,0,1));
 
-        wbcmPanel.setBackground(new java.awt.Color(185, 147, 104));
-        wbcmPanel.setForeground(new java.awt.Color(255, 255, 255));
-        wbcmPanel.setToolTipText("");
-        wbcmPanel.setMaximumSize(new java.awt.Dimension(294, 150));
-        wbcmPanel.setMinimumSize(new java.awt.Dimension(294, 150));
-        wbcmPanel.setPreferredSize(new java.awt.Dimension(294, 150));
-        wbcmPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+                wbcmPanel.setBackground(new java.awt.Color(185, 147, 104));
+                wbcmPanel.setForeground(new java.awt.Color(255, 255, 255));
+                wbcmPanel.setToolTipText("");
+                wbcmPanel.setMaximumSize(new java.awt.Dimension(294, 150));
+                wbcmPanel.setMinimumSize(new java.awt.Dimension(294, 150));
+                wbcmPanel.setPreferredSize(new java.awt.Dimension(294, 150));
+                wbcmPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        fullName_TextField.setBackground(new java.awt.Color(255, 255, 255));
-        fullName_TextField.setFont(new java.awt.Font("MS UI Gothic", 1, 36)); // NOI18N
-        fullName_TextField.setForeground(new java.awt.Color(89, 74, 71));
-        fullName_TextField.setBorder(null);
-        fullName_TextField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                fullName_TextFieldActionPerformed(evt);
-            }
-        });
+                fullName_TextField.setBackground(new java.awt.Color(0,0,0,0));
+                fullName_TextField.setFont(new java.awt.Font("MS UI Gothic", 1, 36)); // NOI18N
+                fullName_TextField.setForeground(new java.awt.Color(89, 74, 71));
+                fullName_TextField.setBorder(null);
+                fullName_TextField.addActionListener(new java.awt.event.ActionListener() {
+                        public void actionPerformed(java.awt.event.ActionEvent evt) {
+                                fullName_TextFieldActionPerformed(evt);
+                        }
+                });
 
-        course_TextField.setBackground(new java.awt.Color(255, 255, 255));
-        course_TextField.setFont(new java.awt.Font("MS UI Gothic", 1, 36)); // NOI18N
-        course_TextField.setForeground(new java.awt.Color(89, 74, 71));
-        course_TextField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                course_TextFieldActionPerformed(evt);
-            }
-        });
+                course_TextField.setBackground(new java.awt.Color(255, 255, 255));
+                course_TextField.setFont(new java.awt.Font("MS UI Gothic", 1, 36)); // NOI18N
+                course_TextField.setForeground(new java.awt.Color(89, 74, 71));
+                course_TextField.addActionListener(new java.awt.event.ActionListener() {
+                        public void actionPerformed(java.awt.event.ActionEvent evt) {
+                                course_TextFieldActionPerformed(evt);
+                        }
+                });
 
-        jLabel1.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel1.setFont(new java.awt.Font("MS UI Gothic", 1, 36)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
+                jLabel1.setBackground(new java.awt.Color(255, 255, 255));
+                jLabel1.setFont(new java.awt.Font("MS UI Gothic", 1, 36)); // NOI18N
+                jLabel1.setForeground(new java.awt.Color(0, 0, 0));
 
-        title_TextField.setBackground(new java.awt.Color(255, 255, 255));
-        title_TextField.setFont(new java.awt.Font("MS UI Gothic", 1, 36)); // NOI18N
-        title_TextField.setForeground(new java.awt.Color(89, 74, 71));
-        title_TextField.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                title_TextFieldMouseClicked(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                title_TextFieldMouseExited(evt);
-            }
-        });
-        title_TextField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                title_TextFieldActionPerformed(evt);
-            }
-        });
+                title_TextField.setBackground(new java.awt.Color(255, 255, 255));
+                title_TextField.setFont(new java.awt.Font("MS UI Gothic", 1, 36)); // NOI18N
+                title_TextField.setForeground(new java.awt.Color(89, 74, 71));
+                title_TextField.addMouseListener(new java.awt.event.MouseAdapter() {
+                        public void mouseClicked(java.awt.event.MouseEvent evt) {
+                                title_TextFieldMouseClicked(evt);
+                        }
+                        public void mouseExited(java.awt.event.MouseEvent evt) {
+                                title_TextFieldMouseExited(evt);
+                        }
+                });
+                title_TextField.addActionListener(new java.awt.event.ActionListener() {
+                        public void actionPerformed(java.awt.event.ActionEvent evt) {
+                                title_TextFieldActionPerformed(evt);
+                        }
+                });
 
-        year_TextField.setBackground(new java.awt.Color(255, 255, 255));
-        year_TextField.setFont(new java.awt.Font("MS UI Gothic", 1, 36)); // NOI18N
-        year_TextField.setForeground(new java.awt.Color(89, 74, 71));
-        year_TextField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                year_TextFieldActionPerformed(evt);
-            }
-        });
+                year_TextField.setBackground(new java.awt.Color(255, 255, 255));
+                year_TextField.setFont(new java.awt.Font("MS UI Gothic", 1, 36)); // NOI18N
+                year_TextField.setForeground(new java.awt.Color(89, 74, 71));
+                year_TextField.addActionListener(new java.awt.event.ActionListener() {
+                        public void actionPerformed(java.awt.event.ActionEvent evt) {
+                                year_TextFieldActionPerformed(evt);
+                        }
+                });
 
-        timeDateYear_TextField.setBackground(new java.awt.Color(255, 255, 255));
-        timeDateYear_TextField.setFont(new java.awt.Font("MS UI Gothic", 1, 36)); // NOI18N
-        timeDateYear_TextField.setForeground(new java.awt.Color(89, 74, 71));
-        timeDateYear_TextField.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                timeDateYear_TextFieldMouseClicked(evt);
-            }
-        });
-        timeDateYear_TextField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                timeDateYear_TextFieldActionPerformed(evt);
-            }
-        });
+                timeDateYear_TextField.setBackground(new java.awt.Color(255, 255, 255));
+                timeDateYear_TextField.setFont(new java.awt.Font("MS UI Gothic", 1, 36)); // NOI18N
+                timeDateYear_TextField.setForeground(new java.awt.Color(89, 74, 71));
+                timeDateYear_TextField.addMouseListener(new java.awt.event.MouseAdapter() {
+                        public void mouseClicked(java.awt.event.MouseEvent evt) {
+                                timeDateYear_TextFieldMouseClicked(evt);
+                        }
+                });
+                timeDateYear_TextField.addActionListener(new java.awt.event.ActionListener() {
+                        public void actionPerformed(java.awt.event.ActionEvent evt) {
+                                timeDateYear_TextFieldActionPerformed(evt);
+                        }
+                });
 
-        jLabel2.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel2.setFont(new java.awt.Font("MS UI Gothic", 1, 36)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(89, 74, 71));
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel2.setText("Fullname:");
+                jLabel2.setBackground(new java.awt.Color(255, 255, 255));
+                jLabel2.setFont(new java.awt.Font("MS UI Gothic", 1, 36)); // NOI18N
+                jLabel2.setForeground(new java.awt.Color(89, 74, 71));
+                jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+                jLabel2.setText("Fullname:");
 
-        jLabel3.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel3.setFont(new java.awt.Font("MS UI Gothic", 1, 36)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(89, 74, 71));
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel3.setText("Course  :");
+                jLabel3.setBackground(new java.awt.Color(255, 255, 255));
+                jLabel3.setFont(new java.awt.Font("MS UI Gothic", 1, 36)); // NOI18N
+                jLabel3.setForeground(new java.awt.Color(89, 74, 71));
+                jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+                jLabel3.setText("Course  :");
 
-        jLabel4.setFont(new java.awt.Font("MS UI Gothic", 1, 36)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(89, 74, 71));
-        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel4.setText("Year      :");
+                jLabel4.setFont(new java.awt.Font("MS UI Gothic", 1, 36)); // NOI18N
+                jLabel4.setForeground(new java.awt.Color(89, 74, 71));
+                jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+                jLabel4.setText("Year      :");
 
-        jLabel5.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel5.setFont(new java.awt.Font("MS UI Gothic", 1, 36)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(89, 74, 71));
-        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel5.setText("Book     :");
+                jLabel5.setBackground(new java.awt.Color(255, 255, 255));
+                jLabel5.setFont(new java.awt.Font("MS UI Gothic", 1, 36)); // NOI18N
+                jLabel5.setForeground(new java.awt.Color(89, 74, 71));
+                jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+                jLabel5.setText("Book     :");
 
-        jLabel6.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel6.setFont(new java.awt.Font("MS UI Gothic", 1, 36)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(89, 74, 71));
-        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel6.setText("Date      :");
-        jLabel6.setToolTipText("");
+                jLabel6.setBackground(new java.awt.Color(255, 255, 255));
+                jLabel6.setFont(new java.awt.Font("MS UI Gothic", 1, 36)); // NOI18N
+                jLabel6.setForeground(new java.awt.Color(89, 74, 71));
+                jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+                jLabel6.setText("Date      :");
+                jLabel6.setToolTipText("");
 
-        jLabel7.setFont(new java.awt.Font("MS UI Gothic", 1, 36)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(89, 74, 71));
-        jLabel7.setText("Status: ");
+                jLabel7.setFont(new java.awt.Font("MS UI Gothic", 1, 36)); // NOI18N
+                jLabel7.setForeground(new java.awt.Color(89, 74, 71));
+                jLabel7.setText("Status: ");
 
-        status_box.setBackground(new java.awt.Color(255, 255, 255));
-        status_box.setFont(new java.awt.Font("MS UI Gothic", 1, 36)); // NOI18N
-        status_box.setForeground(new java.awt.Color(89, 74, 71));
-        status_box.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Borrowed", "Returned" }));
-        status_box.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                status_boxActionPerformed(evt);
-            }
-        });
+                status_box.setBackground(new java.awt.Color(255, 255, 255));
+                status_box.setFont(new java.awt.Font("MS UI Gothic", 1, 36)); // NOI18N
+                status_box.setForeground(new java.awt.Color(89, 74, 71));
+                status_box.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Borrowed", "Returned" }));
+                status_box.addActionListener(new java.awt.event.ActionListener() {
+                        public void actionPerformed(java.awt.event.ActionEvent evt) {
+                                status_boxActionPerformed(evt);
+                        }
+                });
 
-        UpdateBtn.setBackground(new java.awt.Color(255, 255, 255));
-        UpdateBtn.setFont(new java.awt.Font("MS UI Gothic", 1, 30)); // NOI18N
-        UpdateBtn.setForeground(new java.awt.Color(255, 255, 255));
-        UpdateBtn.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        UpdateBtn.setText("UPDATE");
-        UpdateBtn.setToolTipText("");
+                UpdateBtn.setBackground(new java.awt.Color(255, 255, 255));
+                UpdateBtn.setFont(new java.awt.Font("MS UI Gothic", 1, 30)); // NOI18N
+                UpdateBtn.setForeground(new java.awt.Color(255, 255, 255));
+                UpdateBtn.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+                UpdateBtn.setText("UPDATE");
+                UpdateBtn.setToolTipText("");
 
-        SaveBtn.setBackground(new java.awt.Color(255, 255, 255));
-        SaveBtn.setFont(new java.awt.Font("MS UI Gothic", 1, 30)); // NOI18N
-        SaveBtn.setForeground(new java.awt.Color(255, 255, 255));
-        SaveBtn.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        SaveBtn.setText("SAVE");
-        SaveBtn.setToolTipText("");
-        SaveBtn.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                SaveBtnMouseClicked(evt);
-            }
-        });
+                SaveBtn.setBackground(new java.awt.Color(255, 255, 255));
+                SaveBtn.setFont(new java.awt.Font("MS UI Gothic", 1, 30)); // NOI18N
+                SaveBtn.setForeground(new java.awt.Color(255, 255, 255));
+                SaveBtn.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+                SaveBtn.setText("SAVE");
+                SaveBtn.setToolTipText("");
+                SaveBtn.addMouseListener(new java.awt.event.MouseAdapter() {
+                        public void mouseClicked(java.awt.event.MouseEvent evt) {
+                                SaveBtnMouseClicked(evt);
+                        }
+                });
 
-        DeleteBtn.setBackground(new java.awt.Color(255, 255, 255));
-        DeleteBtn.setFont(new java.awt.Font("MS UI Gothic", 1, 30)); // NOI18N
-        DeleteBtn.setForeground(new java.awt.Color(255, 255, 255));
-        DeleteBtn.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        DeleteBtn.setText("DELETE");
-        DeleteBtn.setToolTipText("");
+                DeleteBtn.setBackground(new java.awt.Color(255, 255, 255));
+                DeleteBtn.setFont(new java.awt.Font("MS UI Gothic", 1, 30)); // NOI18N
+                DeleteBtn.setForeground(new java.awt.Color(255, 255, 255));
+                DeleteBtn.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+                DeleteBtn.setText("DELETE");
+                DeleteBtn.setToolTipText("");
 
-        status_box1.setBackground(new java.awt.Color(255, 255, 255));
-        status_box1.setFont(new java.awt.Font("MS UI Gothic", 1, 36)); // NOI18N
-        status_box1.setForeground(new java.awt.Color(89, 74, 71));
-        status_box1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Borrowed", "Returned" }));
-        status_box1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                status_box1ActionPerformed(evt);
-            }
-        });
+                status_box1.setBackground(new java.awt.Color(255, 255, 255));
+                status_box1.setFont(new java.awt.Font("MS UI Gothic", 1, 36)); // NOI18N
+                status_box1.setForeground(new java.awt.Color(89, 74, 71));
+                status_box1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Borrowed", "Returned" }));
+                status_box1.addActionListener(new java.awt.event.ActionListener() {
+                        public void actionPerformed(java.awt.event.ActionEvent evt) {
+                                status_box1ActionPerformed(evt);
+                        }
+                });
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(21, 21, 21)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(17, 17, 17)
-                                .addComponent(wbcmPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 760, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(SaveBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
+                this.setLayout(layout);
+                layout.setHorizontalGroup(
+                        layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                                .addGap(21, 21, 21)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(layout.createSequentialGroup()
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                        .addGroup(layout.createSequentialGroup()
+                                                                .addGap(17, 17, 17)
+                                                                .addComponent(wbcmPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 760, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                        .addGroup(layout.createSequentialGroup()
+                                                                .addComponent(SaveBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                .addGap(18, 18, 18)
+                                                                .addComponent(DeleteBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                                .addComponent(UpdateBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                .addGap(18, 18, 18)
+                                                                .addComponent(status_box1, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                        .addGroup(layout.createSequentialGroup()
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                        .addGroup(layout.createSequentialGroup()
+                                                                .addGap(76, 76, 76)
+                                                                .addComponent(jLabel1))
+                                                        .addGroup(layout.createSequentialGroup()
+                                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                                                        .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                                        .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                                        .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                                        .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                                        .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                                                        .addComponent(fullName_TextField)
+                                                                        .addComponent(title_TextField, javax.swing.GroupLayout.Alignment.TRAILING)
+                                                                        .addComponent(timeDateYear_TextField, javax.swing.GroupLayout.Alignment.TRAILING)
+                                                                        .addComponent(course_TextField)
+                                                                        .addGroup(layout.createSequentialGroup()
+                                                                                .addComponent(year_TextField, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                                .addGap(18, 18, 18)
+                                                                                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                                                .addComponent(status_box, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                                .addGap(0, 0, Short.MAX_VALUE))))
+                );
+                layout.setVerticalGroup(
+                        layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
                                 .addGap(18, 18, 18)
-                                .addComponent(DeleteBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(UpdateBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(wbcmPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 500, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(status_box1, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(76, 76, 76)
-                                .addComponent(jLabel1))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(fullName_TextField)
-                                    .addComponent(title_TextField, javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(timeDateYear_TextField, javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(course_TextField)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(year_TextField, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(status_box, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                        .addGap(0, 0, Short.MAX_VALUE))))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(18, 18, 18)
-                .addComponent(wbcmPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 500, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel1)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(fullName_TextField, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel2))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(course_TextField, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel3))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel4)
-                            .addComponent(year_TextField, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel7)
-                            .addComponent(status_box, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(64, 64, 64)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(title_TextField, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel5))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel6)
-                            .addComponent(timeDateYear_TextField, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap(217, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(UpdateBtn)
-                            .addComponent(DeleteBtn)
-                            .addComponent(SaveBtn)
-                            .addComponent(status_box1, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(93, 93, 93))))
-        );
-    }// </editor-fold>//GEN-END:initComponents
+                                .addComponent(jLabel1)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(layout.createSequentialGroup()
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                                        .addComponent(fullName_TextField, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addComponent(jLabel2))
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                                        .addComponent(course_TextField, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addComponent(jLabel3))
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                                        .addComponent(jLabel4)
+                                                        .addComponent(year_TextField, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addComponent(jLabel7)
+                                                        .addComponent(status_box, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                .addGap(64, 64, 64)
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                                        .addComponent(title_TextField, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addComponent(jLabel5))
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                                        .addComponent(jLabel6)
+                                                        .addComponent(timeDateYear_TextField, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                .addContainerGap(217, Short.MAX_VALUE))
+                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                                        .addComponent(UpdateBtn)
+                                                        .addComponent(DeleteBtn)
+                                                        .addComponent(SaveBtn)
+                                                        .addComponent(status_box1, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                .addGap(93, 93, 93))))
+                );
+        }// </editor-fold>//GEN-END:initComponents
 
 	public void out()
 	{
@@ -494,26 +494,26 @@ public class qrReader extends javax.swing.JPanel implements Runnable,ThreadFacto
     }//GEN-LAST:event_status_box1ActionPerformed
 
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel DeleteBtn;
-    private javax.swing.JLabel SaveBtn;
-    private javax.swing.JLabel UpdateBtn;
-    private javax.swing.JTextField course_TextField;
-    private javax.swing.JTextField fullName_TextField;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextPane result_field;
-    private javax.swing.JComboBox<String> status_box;
-    private javax.swing.JComboBox<String> status_box1;
-    private javax.swing.JTextField timeDateYear_TextField;
-    private javax.swing.JTextField title_TextField;
-    private javax.swing.JPanel wbcmPanel;
-    private javax.swing.JTextField year_TextField;
-    // End of variables declaration//GEN-END:variables
+        // Variables declaration - do not modify//GEN-BEGIN:variables
+        private javax.swing.JLabel DeleteBtn;
+        private javax.swing.JLabel SaveBtn;
+        private javax.swing.JLabel UpdateBtn;
+        private javax.swing.JTextField course_TextField;
+        private javax.swing.JTextField fullName_TextField;
+        private javax.swing.JLabel jLabel1;
+        private javax.swing.JLabel jLabel2;
+        private javax.swing.JLabel jLabel3;
+        private javax.swing.JLabel jLabel4;
+        private javax.swing.JLabel jLabel5;
+        private javax.swing.JLabel jLabel6;
+        private javax.swing.JLabel jLabel7;
+        private javax.swing.JScrollPane jScrollPane1;
+        private javax.swing.JTextPane result_field;
+        private javax.swing.JComboBox<String> status_box;
+        private javax.swing.JComboBox<String> status_box1;
+        private javax.swing.JTextField timeDateYear_TextField;
+        private javax.swing.JTextField title_TextField;
+        private javax.swing.JPanel wbcmPanel;
+        private javax.swing.JTextField year_TextField;
+        // End of variables declaration//GEN-END:variables
 }
