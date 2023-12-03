@@ -646,6 +646,9 @@
             </Property>
             <Property name="verifyInputWhenFocusTarget" type="boolean" value="false"/>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="historyTblMouseClicked"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>

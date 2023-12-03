@@ -82,8 +82,6 @@ public class dashboard extends javax.swing.JFrame {
 
         private void hstoryMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_hstoryMouseClicked
                 // TODO add your handling code here:
-		hstorytble();
-		hstbl.retrieveData();
         }//GEN-LAST:event_hstoryMouseClicked
 
 	public void qrReader()
@@ -93,16 +91,8 @@ public class dashboard extends javax.swing.JFrame {
 	
 	public void hstorytble()
 	{
-		hstory.add(hstbl);
 		hstbl.retrieveData();
-	}
-	
-	public void run()
-	{
-		while(true)
-		{
-			hstorytble();
-		}
+		hstory.add(hstbl);
 	}
 
         // Variables declaration - do not modify//GEN-BEGIN:variables
