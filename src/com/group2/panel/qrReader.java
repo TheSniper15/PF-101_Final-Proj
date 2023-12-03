@@ -10,6 +10,7 @@ import com.google.zxing.NotFoundException;
 import com.google.zxing.Result;
 import com.google.zxing.client.j2se.BufferedImageLuminanceSource;
 import com.google.zxing.common.HybridBinarizer;
+import com.group2.frame.dashboard;
 import com.group2.model.getLineModel;
 import com.group2.myClass.*;
 import java.awt.Dimension;
@@ -34,9 +35,11 @@ public class qrReader extends javax.swing.JPanel implements Runnable,ThreadFacto
 		initComponents();
 		initWebcam();
 		db.Connect();
+		hstbl.retrieveData();
 	}
 	
 	databaseCon db = new databaseCon();
+	historyTable hstbl = new historyTable();
 	
 	@SuppressWarnings("unchecked")
         // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -76,7 +79,7 @@ public class qrReader extends javax.swing.JPanel implements Runnable,ThreadFacto
                 wbcmPanel.setPreferredSize(new java.awt.Dimension(294, 150));
                 wbcmPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-                fullName_TextField.setBackground(new java.awt.Color(0,0,0,0));
+                fullName_TextField.setBackground(new java.awt.Color(255, 255, 255));
                 fullName_TextField.setFont(new java.awt.Font("MS UI Gothic", 1, 36)); // NOI18N
                 fullName_TextField.setForeground(new java.awt.Color(89, 74, 71));
                 fullName_TextField.setBorder(null);
@@ -308,10 +311,6 @@ public class qrReader extends javax.swing.JPanel implements Runnable,ThreadFacto
                 );
         }// </editor-fold>//GEN-END:initComponents
 
-	public void out()
-	{
-		System.exit(0);
-	}
     
 	public void initWebcam()
 	{
@@ -361,7 +360,9 @@ public class qrReader extends javax.swing.JPanel implements Runnable,ThreadFacto
 			if(k == 1)
 			{
 				JOptionPane.showMessageDialog(this,"Record Added!!");
-				
+				dashboard dshbrd = new dashboard();	
+				dshbrd.hstorytble();
+				hstbl.retrieveData();
 			}
 			else
 			{
@@ -496,7 +497,7 @@ public class qrReader extends javax.swing.JPanel implements Runnable,ThreadFacto
 
         // Variables declaration - do not modify//GEN-BEGIN:variables
         private javax.swing.JLabel DeleteBtn;
-        private javax.swing.JLabel SaveBtn;
+        public javax.swing.JLabel SaveBtn;
         private javax.swing.JLabel UpdateBtn;
         private javax.swing.JTextField course_TextField;
         private javax.swing.JTextField fullName_TextField;

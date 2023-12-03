@@ -5,6 +5,8 @@
 package com.group2.panel;
 
 import com.group2.myClass.databaseCon;
+import com.group2.swing.ScrollBar;
+import java.awt.Color;
 import java.sql.SQLException;
 import java.util.Vector;
 import java.util.logging.Level;
@@ -27,6 +29,12 @@ public class update extends javax.swing.JPanel {
     }
     
         databaseCon db = new databaseCon();
+	
+	public void tbl() {
+        jScrollPane1.setVerticalScrollBar(new ScrollBar());
+        jScrollPane1.getVerticalScrollBar().setBackground(Color.WHITE);
+        jScrollPane1.getViewport().setBackground(Color.WHITE);
+    }
         
     public void retrieveData(){
         try {

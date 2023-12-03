@@ -10,6 +10,7 @@ public class dashboard extends javax.swing.JFrame {
 		initComponents();
 		qrReader();
 		hstorytble();
+		hstbl.retrieveData();
 	}
 
 	qrReader qrrd = new qrReader();
@@ -41,6 +42,11 @@ public class dashboard extends javax.swing.JFrame {
                 hstory.setMaximumSize(new java.awt.Dimension(1000, 1000));
                 hstory.setMinimumSize(new java.awt.Dimension(1000, 1000));
                 hstory.setPreferredSize(new java.awt.Dimension(1000, 1000));
+                hstory.addMouseListener(new java.awt.event.MouseAdapter() {
+                        public void mouseClicked(java.awt.event.MouseEvent evt) {
+                                hstoryMouseClicked(evt);
+                        }
+                });
                 jPanel1.add(hstory, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, -1, -1));
 
                 ExirtButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/group2/icon/logout (2).png"))); // NOI18N
@@ -72,9 +78,13 @@ public class dashboard extends javax.swing.JFrame {
 			new login().setVisible(true);
 			this.dispose();
 		}
-	    
-	
     }//GEN-LAST:event_ExirtButton1MouseClicked
+
+        private void hstoryMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_hstoryMouseClicked
+                // TODO add your handling code here:
+		hstorytble();
+		hstbl.retrieveData();
+        }//GEN-LAST:event_hstoryMouseClicked
 
 	public void qrReader()
 	{
@@ -84,6 +94,15 @@ public class dashboard extends javax.swing.JFrame {
 	public void hstorytble()
 	{
 		hstory.add(hstbl);
+		hstbl.retrieveData();
+	}
+	
+	public void run()
+	{
+		while(true)
+		{
+			hstorytble();
+		}
 	}
 
         // Variables declaration - do not modify//GEN-BEGIN:variables
