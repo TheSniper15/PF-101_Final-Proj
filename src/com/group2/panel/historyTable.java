@@ -59,6 +59,11 @@ public class historyTable extends javax.swing.JPanel {
             Logger.getLogger(historyTable.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
+    
+    public void tst()
+    {
+	    retrieveData();
+    }
   
  
     @SuppressWarnings("unchecked")
@@ -75,7 +80,6 @@ public class historyTable extends javax.swing.JPanel {
                 setName(""); // NOI18N
                 setPreferredSize(new java.awt.Dimension(1000, 1000));
 
-                historyTbl.setAutoCreateRowSorter(true);
                 historyTbl.setBackground(new java.awt.Color(185, 147, 104));
                 historyTbl.setFont(new java.awt.Font("MS UI Gothic", 1, 15)); // NOI18N
                 historyTbl.setForeground(new java.awt.Color(255, 255, 255));

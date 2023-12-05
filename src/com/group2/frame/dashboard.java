@@ -91,7 +91,7 @@ public class dashboard extends javax.swing.JFrame {
 	
 	public void hstorytble()
 	{
-		hstbl.retrieveData();
+		hstbl.tst();
 		hstory.add(hstbl);
 	}
 
