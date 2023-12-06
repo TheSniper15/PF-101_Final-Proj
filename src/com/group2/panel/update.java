@@ -82,6 +82,7 @@ public class update extends javax.swing.JPanel {
         Update = new javax.swing.JLabel();
         SaveBtn1 = new javax.swing.JLabel();
         Delete = new javax.swing.JLabel();
+        Delete1 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color (0,0,0,1));
         setForeground(new java.awt.Color (0,0,0,1));
@@ -89,6 +90,9 @@ public class update extends javax.swing.JPanel {
         setMinimumSize(new java.awt.Dimension(710, 1000));
         setPreferredSize(new java.awt.Dimension(710, 1000));
 
+        userTable.setBackground(new java.awt.Color(89, 74, 71));
+        userTable.setFont(new java.awt.Font("MS UI Gothic", 1, 16)); // NOI18N
+        userTable.setForeground(new java.awt.Color(252, 231, 208));
         userTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -196,9 +200,13 @@ public class update extends javax.swing.JPanel {
                 "ID", "USERNAME", "PASSWORD", "STATUS"
             }
         ));
+        userTable.setGridColor(new java.awt.Color(255, 255, 255));
         userTable.setMaximumSize(new java.awt.Dimension(1000, 1000));
         userTable.setMinimumSize(new java.awt.Dimension(1000, 1000));
         userTable.setPreferredSize(new java.awt.Dimension(1000, 1000));
+        userTable.setRowHeight(25);
+        userTable.setSelectionBackground(new java.awt.Color(252, 231, 208));
+        userTable.setSelectionForeground(new java.awt.Color(89, 74, 71));
         userTable.setShowGrid(true);
         jScrollPane1.setViewportView(userTable);
         if (userTable.getColumnModel().getColumnCount() > 0) {
@@ -207,6 +215,7 @@ public class update extends javax.swing.JPanel {
         }
 
         jComboBox2.setFont(new java.awt.Font("MS UI Gothic", 1, 18)); // NOI18N
+        jComboBox2.setForeground(new java.awt.Color(89, 74, 71));
         jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Librarian", "Admin" }));
         jComboBox2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -214,16 +223,18 @@ public class update extends javax.swing.JPanel {
             }
         });
 
+        jTextField1.setBackground(new java.awt.Color(89, 74, 71));
         jTextField1.setFont(new java.awt.Font("MS UI Gothic", 1, 24)); // NOI18N
-        jTextField1.setText("user");
+        jTextField1.setForeground(new java.awt.Color(255, 255, 255));
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField1ActionPerformed(evt);
             }
         });
 
+        jTextField2.setBackground(new java.awt.Color(89, 74, 71));
         jTextField2.setFont(new java.awt.Font("MS UI Gothic", 1, 24)); // NOI18N
-        jTextField2.setText("pass");
+        jTextField2.setForeground(new java.awt.Color(255, 255, 255));
         jTextField2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField2ActionPerformed(evt);
@@ -266,31 +277,50 @@ public class update extends javax.swing.JPanel {
             }
         });
 
+        Delete1.setBackground(new java.awt.Color(255, 255, 255));
+        Delete1.setFont(new java.awt.Font("MS UI Gothic", 1, 24)); // NOI18N
+        Delete1.setForeground(new java.awt.Color(255, 255, 255));
+        Delete1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Delete1.setText("DASH");
+        Delete1.setToolTipText("");
+        Delete1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Delete1MouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 533, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(57, 57, 57)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jComboBox2, 0, 120, Short.MAX_VALUE)
-                    .addComponent(jTextField1)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.DEFAULT_SIZE, 120, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
+                        .addGap(57, 57, 57)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(Update, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(SaveBtn1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(Update, javax.swing.GroupLayout.DEFAULT_SIZE, 114, Short.MAX_VALUE)
                             .addComponent(Delete, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addContainerGap())))
+                        .addContainerGap())
+                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(SaveBtn1, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(Delete1, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addContainerGap())
+                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(20, 20, 20)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(20, 20, 20)
+                .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(30, 30, 30)
                 .addComponent(Update, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -298,6 +328,8 @@ public class update extends javax.swing.JPanel {
                 .addComponent(SaveBtn1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(32, 32, 32)
                 .addComponent(Delete, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(32, 32, 32)
+                .addComponent(Delete1, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1000, Short.MAX_VALUE)
         );
@@ -330,9 +362,14 @@ public class update extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_DeleteMouseClicked
 
+    private void Delete1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Delete1MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Delete1MouseClicked
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Delete;
+    private javax.swing.JLabel Delete1;
     private javax.swing.JLabel SaveBtn1;
     private javax.swing.JLabel Update;
     private javax.swing.JComboBox<String> jComboBox2;
