@@ -13,6 +13,11 @@
         </Component>
       </SubComponents>
     </Container>
+    <Component class="javax.swing.JTextField" name="idTxt">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="jTextField1"/>
+      </Properties>
+    </Component>
   </NonVisualComponents>
   <Properties>
     <Property name="background" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
@@ -49,11 +54,11 @@
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="SaveBtn" min="-2" pref="125" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="DeleteBtn" min="-2" pref="162" max="-2" attributes="0"/>
+                              <Component id="Clearbtn" min="-2" pref="162" max="-2" attributes="0"/>
                               <EmptySpace min="-2" max="-2" attributes="0"/>
                               <Component id="UpdateBtn" min="-2" pref="150" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="status_box1" min="-2" pref="227" max="-2" attributes="0"/>
+                              <Component id="id_box" min="-2" pref="227" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace max="32767" attributes="0"/>
@@ -135,9 +140,9 @@
                       <EmptySpace max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="UpdateBtn" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="DeleteBtn" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="Clearbtn" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="SaveBtn" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="status_box1" alignment="3" min="-2" pref="56" max="-2" attributes="0"/>
+                          <Component id="id_box" alignment="3" min="-2" pref="56" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="93" max="-2" attributes="0"/>
                   </Group>
@@ -394,6 +399,9 @@
         <Property name="text" type="java.lang.String" value="UPDATE"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="UpdateBtnMouseClicked"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="SaveBtn">
       <Properties>
@@ -417,7 +425,7 @@
         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
       </AuxValues>
     </Component>
-    <Component class="javax.swing.JLabel" name="DeleteBtn">
+    <Component class="javax.swing.JLabel" name="Clearbtn">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -429,11 +437,14 @@
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="DELETE"/>
+        <Property name="text" type="java.lang.String" value="CLEAR"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="ClearbtnMouseClicked"/>
+      </Events>
     </Component>
-    <Component class="javax.swing.JComboBox" name="status_box1">
+    <Component class="javax.swing.JComboBox" name="id_box">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -445,14 +456,14 @@
           <Color blue="47" green="4a" red="59" type="rgb"/>
         </Property>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="2">
-            <StringItem index="0" value="Borrowed"/>
-            <StringItem index="1" value="Returned"/>
+          <StringArray count="1">
+            <StringItem index="0" value="ID"/>
           </StringArray>
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="status_box1ActionPerformed"/>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="id_boxMouseClicked"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="id_boxActionPerformed"/>
       </Events>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>

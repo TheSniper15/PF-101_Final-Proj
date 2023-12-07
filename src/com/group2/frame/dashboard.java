@@ -1,5 +1,6 @@
 package com.group2.frame;
 
+import com.group2.myClass.databaseCon;
 import com.group2.panel.*;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
@@ -8,13 +9,14 @@ public class dashboard extends javax.swing.JFrame {
 
 	public dashboard() {
 		initComponents();
-		qrReader();
-		hstorytble();
+		pnls();
+		db.Connect();
 		hstbl.retrieveData();
 	}
 
 	qrReader qrrd = new qrReader();
 	historyTable hstbl = new historyTable();
+	databaseCon db = new databaseCon();
 	
 	@SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -84,14 +86,9 @@ public class dashboard extends javax.swing.JFrame {
                 // TODO add your handling code here:
         }//GEN-LAST:event_hstoryMouseClicked
 
-	public void qrReader()
+	public void pnls()
 	{
 		qrReaderPanel.add(qrrd);
-	}
-	
-	public void hstorytble()
-	{
-		hstbl.tst();
 		hstory.add(hstbl);
 	}
 

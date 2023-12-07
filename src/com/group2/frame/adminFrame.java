@@ -89,6 +89,7 @@ public class adminFrame extends javax.swing.JFrame {
         {
             userpanel.add(up);
         }
+    
     private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBox2ActionPerformed

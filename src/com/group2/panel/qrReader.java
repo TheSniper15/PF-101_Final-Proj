@@ -15,15 +15,18 @@ import com.group2.model.getLineModel;
 import com.group2.myClass.*;
 import java.awt.Dimension;
 import java.awt.image.BufferedImage;
+import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.Vector;
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ThreadFactory;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 
 public class qrReader extends javax.swing.JPanel implements Runnable,ThreadFactory{
 
@@ -35,6 +38,7 @@ public class qrReader extends javax.swing.JPanel implements Runnable,ThreadFacto
 		initComponents();
 		initWebcam();
 		db.Connect();
+		loadId();
 		hstbl.retrieveData();
 	}
 	
@@ -47,6 +51,7 @@ public class qrReader extends javax.swing.JPanel implements Runnable,ThreadFacto
 
                 jScrollPane1 = new javax.swing.JScrollPane();
                 result_field = new javax.swing.JTextPane();
+                idTxt = new javax.swing.JTextField();
                 wbcmPanel = new javax.swing.JPanel();
                 fullName_TextField = new javax.swing.JTextField();
                 course_TextField = new javax.swing.JTextField();
@@ -63,10 +68,12 @@ public class qrReader extends javax.swing.JPanel implements Runnable,ThreadFacto
                 status_box = new javax.swing.JComboBox<>();
                 UpdateBtn = new javax.swing.JLabel();
                 SaveBtn = new javax.swing.JLabel();
-                DeleteBtn = new javax.swing.JLabel();
-                status_box1 = new javax.swing.JComboBox<>();
+                Clearbtn = new javax.swing.JLabel();
+                id_box = new javax.swing.JComboBox<>();
 
                 jScrollPane1.setViewportView(result_field);
+
+                idTxt.setText("jTextField1");
 
                 setBackground(new java.awt.Color(0,0,0,1));
                 setForeground(new java.awt.Color(0,0,0,1));
@@ -192,6 +199,11 @@ public class qrReader extends javax.swing.JPanel implements Runnable,ThreadFacto
                 UpdateBtn.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
                 UpdateBtn.setText("UPDATE");
                 UpdateBtn.setToolTipText("");
+                UpdateBtn.addMouseListener(new java.awt.event.MouseAdapter() {
+                        public void mouseClicked(java.awt.event.MouseEvent evt) {
+                                UpdateBtnMouseClicked(evt);
+                        }
+                });
 
                 SaveBtn.setBackground(new java.awt.Color(255, 255, 255));
                 SaveBtn.setFont(new java.awt.Font("MS UI Gothic", 1, 30)); // NOI18N
@@ -205,20 +217,30 @@ public class qrReader extends javax.swing.JPanel implements Runnable,ThreadFacto
                         }
                 });
 
-                DeleteBtn.setBackground(new java.awt.Color(255, 255, 255));
-                DeleteBtn.setFont(new java.awt.Font("MS UI Gothic", 1, 30)); // NOI18N
-                DeleteBtn.setForeground(new java.awt.Color(255, 255, 255));
-                DeleteBtn.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-                DeleteBtn.setText("DELETE");
-                DeleteBtn.setToolTipText("");
+                Clearbtn.setBackground(new java.awt.Color(255, 255, 255));
+                Clearbtn.setFont(new java.awt.Font("MS UI Gothic", 1, 30)); // NOI18N
+                Clearbtn.setForeground(new java.awt.Color(255, 255, 255));
+                Clearbtn.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+                Clearbtn.setText("CLEAR");
+                Clearbtn.setToolTipText("");
+                Clearbtn.addMouseListener(new java.awt.event.MouseAdapter() {
+                        public void mouseClicked(java.awt.event.MouseEvent evt) {
+                                ClearbtnMouseClicked(evt);
+                        }
+                });
 
-                status_box1.setBackground(new java.awt.Color(255, 255, 255));
-                status_box1.setFont(new java.awt.Font("MS UI Gothic", 1, 36)); // NOI18N
-                status_box1.setForeground(new java.awt.Color(89, 74, 71));
-                status_box1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Borrowed", "Returned" }));
-                status_box1.addActionListener(new java.awt.event.ActionListener() {
+                id_box.setBackground(new java.awt.Color(255, 255, 255));
+                id_box.setFont(new java.awt.Font("MS UI Gothic", 1, 36)); // NOI18N
+                id_box.setForeground(new java.awt.Color(89, 74, 71));
+                id_box.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "ID" }));
+                id_box.addMouseListener(new java.awt.event.MouseAdapter() {
+                        public void mouseClicked(java.awt.event.MouseEvent evt) {
+                                id_boxMouseClicked(evt);
+                        }
+                });
+                id_box.addActionListener(new java.awt.event.ActionListener() {
                         public void actionPerformed(java.awt.event.ActionEvent evt) {
-                                status_box1ActionPerformed(evt);
+                                id_boxActionPerformed(evt);
                         }
                 });
 
@@ -237,11 +259,11 @@ public class qrReader extends javax.swing.JPanel implements Runnable,ThreadFacto
                                                         .addGroup(layout.createSequentialGroup()
                                                                 .addComponent(SaveBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                                 .addGap(18, 18, 18)
-                                                                .addComponent(DeleteBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                .addComponent(Clearbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                                 .addComponent(UpdateBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                                 .addGap(18, 18, 18)
-                                                                .addComponent(status_box1, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                                                .addComponent(id_box, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                         .addGroup(layout.createSequentialGroup()
                                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -304,9 +326,9 @@ public class qrReader extends javax.swing.JPanel implements Runnable,ThreadFacto
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                                         .addComponent(UpdateBtn)
-                                                        .addComponent(DeleteBtn)
+                                                        .addComponent(Clearbtn)
                                                         .addComponent(SaveBtn)
-                                                        .addComponent(status_box1, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                        .addComponent(id_box, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE))
                                                 .addGap(93, 93, 93))))
                 );
         }// </editor-fold>//GEN-END:initComponents
@@ -359,9 +381,8 @@ public class qrReader extends javax.swing.JPanel implements Runnable,ThreadFacto
 			
 			if(k == 1)
 			{
-				JOptionPane.showMessageDialog(this,"Record Added!!");
-				dashboard dshbrd = new dashboard();	
-				dshbrd.hstorytble();
+				JOptionPane.showMessageDialog(this,"Record Added!!");	
+				loadId();
 				hstbl.retrieveData();
 			}
 			else
@@ -374,6 +395,92 @@ public class qrReader extends javax.swing.JPanel implements Runnable,ThreadFacto
 			Logger.getLogger(qrReader.class.getName()).log(Level.SEVERE, null, ex);
 		}
 	}
+	
+	public void loadId()
+	{
+		try 
+		{
+			db.pst = db.con.prepareStatement("SELECT ID FROM history");
+			db.rs = db.pst.executeQuery();
+			
+			while(db.rs.next())
+			{
+				id_box.addItem(db.rs.getString(1));
+			}
+		} 
+		catch (SQLException ex) 
+		{
+			Logger.getLogger(qrReader.class.getName()).log(Level.SEVERE, null, ex);
+		}
+	}
+	
+	public void search()
+	{
+		try 
+		{
+			String pid = id_box.getSelectedItem().toString();
+			
+			db.pst = db.con.prepareStatement("SELECT * FROM history WHERE ID=?");
+			db.pst.setString(1,pid);
+			db.rs = db.pst.executeQuery();
+			
+			if(db.rs.next() == true)
+			{
+				idTxt.setText(db.rs.getString(1));
+				fullName_TextField.setText(db.rs.getString(2));
+				course_TextField.setText(db.rs.getString(3));
+				year_TextField.setText(db.rs.getString(4));
+				title_TextField.setText(db.rs.getString(5));
+				timeDateYear_TextField.setText(db.rs.getString(7));
+			}
+		} 
+		catch (SQLException ex) 
+		{
+			Logger.getLogger(qrReader.class.getName()).log(Level.SEVERE, null, ex);
+		}
+	}
+	
+	public void ud()
+    {
+	    try 
+		{
+			String nm = fullName_TextField.getText();
+			String crs = course_TextField.getText();
+			String yr = year_TextField.getText();
+			String bk = title_TextField.getText();
+			String sts = status_box.getSelectedItem().toString();
+			String dt = timeDateYear_TextField.getText();
+			String id = idTxt.getText();
+			
+			db.pst = db.con.prepareStatement("UPDATE history SET Name=?,Course=?,Year=?,Book=?,Status=?,Date=? WHERE ID=?");
+			
+			db.pst.setString(1, nm);
+			db.pst.setString(2, crs);
+			db.pst.setString(3, yr);
+			db.pst.setString(4, bk);
+			db.pst.setString(5, sts);
+			db.pst.setString(6, dt);
+			db.pst.setString(7, id);
+
+			int k = db.pst.executeUpdate();
+			if(k == 1)
+			{
+				JOptionPane.showMessageDialog(this,"Record Has Been Updated!!");
+				fullName_TextField.setText("");
+				course_TextField.setText("");
+				timeDateYear_TextField.setText("");
+				title_TextField.setText("");
+				year_TextField.setText("");
+				result_field.setText("");
+				
+				hstbl.retrieveData();
+			}
+		} 
+		catch (SQLException ex) 
+		{
+			Logger.getLogger(update.class.getName()).log(Level.SEVERE, null, ex);
+		}
+    }
         
         getLineModel gl = new getLineModel();
         public String name, fname, lname, mi, ay, course;
@@ -490,17 +597,40 @@ public class qrReader extends javax.swing.JPanel implements Runnable,ThreadFacto
 		saveact();
         }//GEN-LAST:event_SaveBtnMouseClicked
 
-    private void status_box1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_status_box1ActionPerformed
+    private void id_boxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_id_boxActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_status_box1ActionPerformed
+    }//GEN-LAST:event_id_boxActionPerformed
+
+        private void id_boxMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_id_boxMouseClicked
+                // TODO add your handling code here:
+		search();
+        }//GEN-LAST:event_id_boxMouseClicked
+
+        private void ClearbtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ClearbtnMouseClicked
+                // TODO add your handling code here:
+		fullName_TextField.setText("");
+		course_TextField.setText("");
+		timeDateYear_TextField.setText("");
+		title_TextField.setText("");
+		year_TextField.setText("");
+		result_field.setText("");
+		id_box.setSelectedIndex(0);
+        }//GEN-LAST:event_ClearbtnMouseClicked
+
+        private void UpdateBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_UpdateBtnMouseClicked
+                // TODO add your handling code here:
+		ud();
+        }//GEN-LAST:event_UpdateBtnMouseClicked
 
 
         // Variables declaration - do not modify//GEN-BEGIN:variables
-        private javax.swing.JLabel DeleteBtn;
+        private javax.swing.JLabel Clearbtn;
         public javax.swing.JLabel SaveBtn;
         private javax.swing.JLabel UpdateBtn;
         private javax.swing.JTextField course_TextField;
         private javax.swing.JTextField fullName_TextField;
+        private javax.swing.JTextField idTxt;
+        private javax.swing.JComboBox<String> id_box;
         private javax.swing.JLabel jLabel1;
         private javax.swing.JLabel jLabel2;
         private javax.swing.JLabel jLabel3;
@@ -511,7 +641,6 @@ public class qrReader extends javax.swing.JPanel implements Runnable,ThreadFacto
         private javax.swing.JScrollPane jScrollPane1;
         private javax.swing.JTextPane result_field;
         private javax.swing.JComboBox<String> status_box;
-        private javax.swing.JComboBox<String> status_box1;
         private javax.swing.JTextField timeDateYear_TextField;
         private javax.swing.JTextField title_TextField;
         private javax.swing.JPanel wbcmPanel;
