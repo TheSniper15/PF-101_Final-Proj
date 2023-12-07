@@ -384,7 +384,7 @@ public class qrReader extends javax.swing.JPanel implements Runnable,ThreadFacto
 				JOptionPane.showMessageDialog(this,"Record Added!!");	
 				loadId();
 				hstbl.retrieveData();
-				new dashboard().pnls();
+				new dashboard().rfrsh();
 			}
 			else
 			{
