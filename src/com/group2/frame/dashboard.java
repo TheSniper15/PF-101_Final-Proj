@@ -90,6 +90,7 @@ public class dashboard extends javax.swing.JFrame {
 	{
 		qrReaderPanel.add(qrrd);
 		hstory.add(hstbl);
+		hstbl.retrieveData();
 	}
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

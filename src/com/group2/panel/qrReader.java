@@ -384,6 +384,7 @@ public class qrReader extends javax.swing.JPanel implements Runnable,ThreadFacto
 				JOptionPane.showMessageDialog(this,"Record Added!!");	
 				loadId();
 				hstbl.retrieveData();
+				new dashboard().pnls();
 			}
 			else
 			{
@@ -402,6 +403,9 @@ public class qrReader extends javax.swing.JPanel implements Runnable,ThreadFacto
 		{
 			db.pst = db.con.prepareStatement("SELECT ID FROM history");
 			db.rs = db.pst.executeQuery();
+			
+			id_box.removeAllItems();
+			id_box.addItem("ID");
 			
 			while(db.rs.next())
 			{
@@ -481,6 +485,7 @@ public class qrReader extends javax.swing.JPanel implements Runnable,ThreadFacto
 			Logger.getLogger(update.class.getName()).log(Level.SEVERE, null, ex);
 		}
     }
+	
         
         getLineModel gl = new getLineModel();
         public String name, fname, lname, mi, ay, course;

@@ -9,6 +9,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.Vector;
 import java.sql.SQLException;
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
 
@@ -59,6 +60,8 @@ public class historyTable extends javax.swing.JPanel {
             Logger.getLogger(historyTable.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
+    
+	
     
     public void tst()
     {

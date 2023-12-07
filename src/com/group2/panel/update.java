@@ -113,6 +113,69 @@ public class update extends javax.swing.JPanel {
 			Logger.getLogger(update.class.getName()).log(Level.SEVERE, null, ex);
 		}
     }
+    
+	public void del()
+	{
+		try 
+		{
+			String id = idTxt.getText();
+			db.pst = db.con.prepareStatement("DELETE FROM librarians WHERE ID=? and Status=?");
+			db.pst.setString(1,id);
+			db.pst.setString(2,"Librarian");
+			
+			int k = db.pst.executeUpdate();
+			if(k == 1)
+			{
+				JOptionPane.showMessageDialog(this,"Record Has Been Deleted!!");
+				usrnm.setText("");
+				psswd.setText("");;
+				usrnm.requestFocus();
+				
+				retrieveData();
+			}
+			else
+			{
+				JOptionPane.showMessageDialog(this,"Record Has Failed To Deleted!!");
+			}
+		} 
+		catch (SQLException ex) 
+		{
+			Logger.getLogger(update.class.getName()).log(Level.SEVERE, null, ex);
+		}
+	}
+	
+	public void adduser()
+	{	
+		try
+		{
+			String usr = usrnm.getText();
+			String pswd = psswd.getText();
+			String sts = status_box.getSelectedItem().toString();
+
+			
+			db.pst = db.con.prepareStatement("INSERT INTO librarians (username,password,Status)VALUES(?,?,?)");
+			
+			db.pst.setString(1, usr);
+			db.pst.setString(2, pswd);
+			db.pst.setString(3, sts);
+			
+			int k = db.pst.executeUpdate();
+			
+			if(k == 1)
+			{
+				JOptionPane.showMessageDialog(this,"Record Added!!");	
+				retrieveData();
+			}
+			else
+			{
+				JOptionPane.showMessageDialog(this,"Record Failed To Save!!");
+			}
+		}
+		catch(SQLException ex)
+		{
+			Logger.getLogger(qrReader.class.getName()).log(Level.SEVERE, null, ex);
+		}
+	}
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -412,11 +475,13 @@ public class update extends javax.swing.JPanel {
     }//GEN-LAST:event_UpdateMouseClicked
 
     private void SaveBtn1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SaveBtn1MouseClicked
-        // TODO add your handling code here:
+        // TODO add your handling code here:\
+	adduser();
     }//GEN-LAST:event_SaveBtn1MouseClicked
 
     private void DeleteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DeleteMouseClicked
         // TODO add your handling code here:
+	del();
     }//GEN-LAST:event_DeleteMouseClicked
 
     private void dashMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dashMouseClicked
