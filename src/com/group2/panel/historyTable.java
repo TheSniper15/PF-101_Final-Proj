@@ -60,14 +60,6 @@ public class historyTable extends javax.swing.JPanel {
             Logger.getLogger(historyTable.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-    
-	
-    
-    public void tst()
-    {
-	    retrieveData();
-    }
-  
  
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
