@@ -15,18 +15,15 @@ import com.group2.model.getLineModel;
 import com.group2.myClass.*;
 import java.awt.Dimension;
 import java.awt.image.BufferedImage;
-import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.Vector;
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ThreadFactory;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
-import javax.swing.table.DefaultTableModel;
 
 public class qrReader extends javax.swing.JPanel implements Runnable,ThreadFactory{
 
